@@ -1,0 +1,50 @@
+# BET_ONLINE GITIGNORE #
+
+# Ignore OS files #
+# =============== #
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+*[Tt]humbs.db
+*.Trashes
+
+# Ignore logs and databases #
+# ========================= #
+*.log
+*.sql
+error_log
+access_log
+
+# Ignore everything in "wp-content" except the "plugins" and "themes" directories. #
+# ================================================================================ #
+/*
+!.gitignore
+!plugins/
+!themes/
+!README.md
+
+# Ignore everything in "plugins" except certain plugins. #
+# ========================================================== #
+plugins/*
+!plugins/bet_online-functionality/
+!plugins/CMB2/
+!plugins/cmb2-conditionals/
+!plugins/bet_online-social-media-widget/
+
+# Ignore everything in "themes" except the active theme. #
+# ====================================================== #
+themes/*
+!themes/bet_online/
+
+# Ignore npm packages #
+# =================== #
+themes/bet_online/node_modules/*
+
+# Ignore build files #
+# ================== #
+themes/bet_online/gulpfile.js
+themes/bet_online/build/*
+themes/bet_online/style.css
