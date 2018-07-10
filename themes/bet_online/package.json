@@ -1,0 +1,34 @@
+{
+  "name": "bet_online",
+  "version": "1.0.0",
+  "description": "A WordPress theme for Bet Online blog website. Purpose it to create more traffic for it's main website. This theme was forked from Underscores.",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mountainManCode/bet_online_blog.git"
+  },
+  "author": "Aaron Griffiths",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mountainManCode/bet_online_blog/issues"
+  },
+  "homepage": "https://github.com/mountainManCode/bet_online_blog#readme",
+  "devDependencies": {
+    "browser-sync": "^2.24.5",
+    "gulp": "^4.0.0",
+    "gulp-autoprefixer": "^5.0.0",
+    "gulp-cssnano": "^2.1.3",
+    "gulp-eslint": "^5.0.0",
+    "gulp-prettyerror": "^1.2.1",
+    "gulp-rename": "^1.3.0",
+    "gulp-sass": "^4.0.1",
+    "gulp-sourcemaps": "^2.6.4",
+    "gulp-uglify": "^3.0.0"
+  },
+  "prettier": {
+    "singleQuote": true
+  }
+}
