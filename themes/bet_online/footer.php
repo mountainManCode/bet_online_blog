@@ -12,8 +12,7 @@
 ?>
 
 	</div><!-- #content -->
-
-	<!-- <footer id="colophon" class="site-footer"> -->
+	
 		<!-- FOOTER SECTION -->
 		<footer id="colophon" class="layout-footer">
 		 <div class="container footer-seo">

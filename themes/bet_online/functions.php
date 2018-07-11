@@ -122,7 +122,13 @@ add_action( 'widgets_init', 'bet_online_widgets_init' );
 function bet_online_scripts() {
 	wp_enqueue_style( 'bet_online-style', get_stylesheet_uri() );
 
+	wp_enqueue_script('jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js');
+
+	wp_enqueue_script('bootstrap', 'https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js');
+
 	wp_enqueue_script( 'bet_online-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
+
+	wp_enqueue_script( 'bet_online-layout', get_template_directory_uri() . '/js/layout.js', array(), '20151215', true );
 
 	wp_enqueue_script( 'bet_online-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
 
