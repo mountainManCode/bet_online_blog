@@ -32,7 +32,7 @@
                 <div class="row">
                     <div class="col-5">
                         <div class="logo">
-                            <a href="./home">
+                            <a href="<?php echo home_url() ?>">
                                 <img src="<?php echo get_template_directory_uri() . '/assets/img/logo-full-ag-white.png' ?>" alt='' />
                             </a>
                         </div>
@@ -68,7 +68,7 @@
                 </form>
               </div> -->
                     <nav class="categories ml-auto col-8">
-                        <a href="./sports">
+                        <a href="<?php echo home_url() ?>/sports">
                             <img class="svg" src="<?php echo get_template_directory_uri() . '/assets/img/new/sports.svg' ?>" alt='' />
                             <!-- no-gap
                 -->
@@ -76,32 +76,32 @@
                         </a>
                         <!-- no-gap
                 -->
-                        <a href="./casino">
+                        <a href="<?php echo home_url() ?>/casino">
                             <img class="svg" src="<?php echo get_template_directory_uri() . '/assets/img/new/casino.svg' ?>" />CASINO
                         </a>
                         <!-- no-gap
                 -->
-                        <a href="./poker">
+                        <a href="<?php echo home_url() ?>/poker">
                             <img class="svg" src="<?php echo get_template_directory_uri() . '/assets/img/new/poker.svg' ?>" />POKER
                         </a>
                         <!-- no-gap
                 -->
-                        <a href="./esports">
+                        <a href="<?php echo home_url() ?>/esports">
                             <img class="svg" src="<?php echo get_template_directory_uri() . '/assets/img/new/esports.svg' ?>" />E-SPORTS
                         </a>
                         <!-- no-gap
                 -->
-                        <a href="./horses">
+                        <a href="<?php echo home_url() ?>/horses">
                             <img class="svg" src="<?php echo get_template_directory_uri() . '/assets/img/new/horses.svg' ?>" />HORSES
                         </a>
                         <!-- no-gap
                 -->
-                        <a href="./finance">
+                        <a href="<?php echo home_url() ?>/finance">
                             <img class="svg" src="<?php echo get_template_directory_uri() . '/assets/img/new/finance.svg' ?>" />FINANCE
                         </a>
                         <!-- no-gap
                 -->
-                        <a href="./promotions">
+                        <a href="<?php echo home_url() ?>/promotions">
                             <img class="svg" src="<?php echo get_template_directory_uri() . '/assets/img/new/promos.svg' ?>" />PROMOS
                         </a>
                     </nav>
@@ -152,32 +152,32 @@
                 <!-- dynamic content-->
                 <nav class="row no-gutters nav-body nav-home active-nav-content tile-wrapper">
                     <div class="col-6 mobile-nav-tile">
-                        <a href="./sports">
+                        <a href="<?php echo home_url() ?>/sports">
                             <img src="<?php echo get_template_directory_uri() . '/assets/img/new/icon-sports.svg' ?>"> sports
                         </a>
                     </div>
                     <div class="col-6 mobile-nav-tile">
-                        <a href="./casino">
+                        <a href="<?php echo home_url() ?>/casino">
                             <img src="<?php echo get_template_directory_uri() . '/assets/img/new/icon-casino.svg' ?>"> casino
                         </a>
                     </div>
                     <div class="col-6 mobile-nav-tile">
-                        <a href="./esports">
+                        <a href="<?php echo home_url() ?>/esports">
                             <img src="<?php echo get_template_directory_uri() . '/assets/img/new/icon-esports.svg' ?>"> e-sports
                         </a>
                     </div>
                     <div class="col-6 mobile-nav-tile">
-                        <a href="./poker">
+                        <a href="<?php echo home_url() ?>/poker">
                             <img src="<?php echo get_template_directory_uri() . '/assets/img/new/icon-poker.svg' ?>"> poker
                         </a>
                     </div>
                     <div class="col-6 mobile-nav-tile">
-                        <a href="./horse">
+                        <a href="<?php echo home_url() ?>/horses">
                             <img src="<?php echo get_template_directory_uri() . '/assets/img/new/icon-horses.svg' ?>"> horses
                         </a>
                     </div>
                     <div class="col-6 mobile-nav-tile">
-                        <a href="./finance">
+                        <a href="<?php echo home_url() ?>/finance">
                             <img src="<?php echo get_template_directory_uri() . '/assets/img/new/icon-financials.svg' ?>"> financials
                         </a>
                     </div>
