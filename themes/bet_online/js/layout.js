@@ -1,4 +1,11 @@
-$(document).ready(function() {
+/**
+ * File layout.js.
+ *
+ * Handles toggling the navigation menu.
+ */
+
+// $(document).ready(function() {
+(function($) {
   // NAV
   $('.layout-header-session-balance').click(function() {
     $('.layout-header-session-popdown').toggleClass(
@@ -79,4 +86,4 @@ $(document).ready(function() {
       );
     });
   });
-});
+})(jQuery);

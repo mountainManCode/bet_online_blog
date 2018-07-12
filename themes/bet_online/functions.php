@@ -122,15 +122,21 @@ add_action( 'widgets_init', 'bet_online_widgets_init' );
 function bet_online_scripts() {
 	wp_enqueue_style( 'bet_online-style', get_stylesheet_uri() );
 
-	wp_enqueue_script('jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js');
+	wp_enqueue_style( 'bs_css', 'https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css' );
 
-	wp_enqueue_script('bootstrap', 'https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js');
+	wp_enqueue_script('jquery', 'https://code.jquery.com/jquery-3.2.1.min.js');
 
-	wp_enqueue_script( 'bet_online-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
+	wp_enqueue_script('cf_tether_js', 'https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js');
 
-	wp_enqueue_script( 'bet_online-layout', get_template_directory_uri() . '/js/layout.js', array(), '20151215', true );
+	wp_enqueue_script('cf_popper_js', 'https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js');
 
-	wp_enqueue_script( 'bet_online-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
+	wp_enqueue_script('bs_js', 'https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js');
+
+	wp_enqueue_script( 'bet_online-navigation', get_template_directory_uri() . '/build/js/navigation.min.js', array(), '20151215', true );
+
+	wp_enqueue_script( 'bet_online-layout', get_template_directory_uri() . '/build/js/layout.min.js', array(), '20151215', true );
+
+	wp_enqueue_script( 'bet_online-skip-link-focus-fix', get_template_directory_uri() . '/build/js/skip-link-focus-fix.min.js', array(), '20151215', true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );

@@ -21,7 +21,6 @@
 </head>
 
 <body <?php body_class(); ?>>
-
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'bet_online' ); ?></a>
 
@@ -34,6 +33,7 @@
                         <div class="logo">
                             <a href="./home">
                                 <img src="<?php echo get_template_directory_uri() . '/assets/img/logo-full-ag-white.png' ?>" alt='' />
+                                THIS IS DESKTOP
                             </a>
                         </div>
                     </div>
@@ -77,32 +77,32 @@
                         <!-- no-gap
                 -->
                         <a href="./casino">
-                            <img class="svg" src="<?php echo get_template_directory_uri() . '/assets/img/new/casino.svg' ?>" />CASINO
+                            <img class="svg" src="<?php echo get_template_directory_uri() . '/assets/img/new/casino.svg' ?>" alt='' />CASINO
                         </a>
                         <!-- no-gap
                 -->
                         <a href="./poker">
-                            <img class="svg" src="<?php echo get_template_directory_uri() . '/assets/img/new/poker.svg' ?>" />POKER
+                            <img class="svg" src="<?php echo get_template_directory_uri() . '/assets/img/new/poker.svg' ?>" alt='' />POKER
                         </a>
                         <!-- no-gap
                 -->
                         <a href="./esports">
-                            <img class="svg" src="<?php echo get_template_directory_uri() . '/assets/img/new/esports.svg' ?>" />E-SPORTS
+                            <img class="svg" src="<?php echo get_template_directory_uri() . '/assets/img/new/esports.svg' ?>" alt='' />E-SPORTS
                         </a>
                         <!-- no-gap
                 -->
                         <a href="./horses">
-                            <img class="svg" src="<?php echo get_template_directory_uri() . '/assets/img/new/horses.svg' ?>" />HORSES
+                            <img class="svg" src="<?php echo get_template_directory_uri() . '/assets/img/new/horses.svg' ?>" alt='' />HORSES
                         </a>
                         <!-- no-gap
                 -->
                         <a href="./finance">
-                            <img class="svg" src="<?php echo get_template_directory_uri() . '/assets/img/new/finance.svg' ?>" />FINANCE
+                            <img class="svg" src="<?php echo get_template_directory_uri() . '/assets/img/new/finance.svg' ?>" alt='' />FINANCE
                         </a>
                         <!-- no-gap
                 -->
                         <a href="./promotions">
-                            <img class="svg" src="<?php echo get_template_directory_uri() . '/assets/img/new/promos.svg' ?>" />PROMOS
+                            <img class="svg" src="<?php echo get_template_directory_uri() . '/assets/img/new/promos.svg' ?>" alt='' />PROMOS
                         </a>
                     </nav>
                 </div>
@@ -115,28 +115,29 @@
         <nav class="container-fluid">
             <div class="row no-gutters nav-menu">
                 <div class="col">
-                    <div data-nav="promo" class="logo-wrapper">    
-                    <img class="svg" src="<?php echo get_template_directory_uri() . '/assets/img/new/icon-gift.svg' ?>" />
+                    <div data-nav="promo" class="logo-wrapper">
+                        THIS IS MOBILE    
+                    <img class="svg" src="<?php echo get_template_directory_uri() . '/assets/img/new/icon-gift.svg' ?>" alt='' />
                     </div>
                 </div>
                 <div class="col">
                     <div data-nav="account" class="logo-wrapper">
-                        <img class="svg" src="<?php echo get_template_directory_uri() . '/assets/img/new/logo-my-account.svg' ?>" />
+                        <img class="svg" src="<?php echo get_template_directory_uri() . '/assets/img/new/logo-my-account.svg' ?>" alt='' />
                     </div>
                 </div>
                 <div class="col">
                     <div data-nav="home" class="logo-round">
-                    <img class="svg" src="<?php echo get_template_directory_uri() . '/assets/img/new/logo-bo.svg' ?>" />
+                        <img class="svg" src="<?php echo get_template_directory_uri() . '/assets/img/new/logo-bo.svg' ?>" alt='' />
                     </div>
                 </div>
                 <div class="col">
                     <div data-nav="deposit" class="logo-wrapper">
-                        <img class="svg" src="<?php echo get_template_directory_uri() . '/assets/img/new/logo-sportsbook.svg' ?>" />
+                        <img class="svg" src="<?php echo get_template_directory_uri() . '/assets/img/new/logo-sportsbook.svg' ?>" alt='' />
                     </div>
                 </div>
                 <div class="col">
                     <div data-nav="betslip" class="logo-wrapper">
-                        <img class="svg" src="<?php echo get_template_directory_uri() . '/assets/img/new/logo-betslip.svg' ?>" />
+                        <img class="svg" src="<?php echo get_template_directory_uri() . '/assets/img/new/logo-betslip.svg' ?>" alt='' />
                     </div>
                 </div>
                 </ul>
@@ -153,36 +154,36 @@
                 <nav class="row no-gutters nav-body nav-home active-nav-content tile-wrapper">
                     <div class="col-6 mobile-nav-tile">
                         <a href="./sports">
-                            <img src="<?php echo get_template_directory_uri() . '/assets/img/new/icon-sports.svg' ?>"> sports
+                            <img src="<?php echo get_template_directory_uri() . '/assets/img/new/icon-sports.svg' ?>" alt=''> sports
                         </a>
                     </div>
                     <div class="col-6 mobile-nav-tile">
                         <a href="./casino">
-                            <img src="<?php echo get_template_directory_uri() . '/assets/img/new/icon-casino.svg' ?>"> casino
+                            <img src="<?php echo get_template_directory_uri() . '/assets/img/new/icon-casino.svg' ?>" alt=''> casino
                         </a>
                     </div>
                     <div class="col-6 mobile-nav-tile">
                         <a href="./esports">
-                            <img src="<?php echo get_template_directory_uri() . '/assets/img/new/icon-esports.svg' ?>"> e-sports
+                            <img src="<?php echo get_template_directory_uri() . '/assets/img/new/icon-esports.svg' ?>" alt=''> e-sports
                         </a>
                     </div>
                     <div class="col-6 mobile-nav-tile">
                         <a href="./poker">
-                            <img src="<?php echo get_template_directory_uri() . '/assets/img/new/icon-poker.svg' ?>"> poker
+                            <img src="./assets/img/new/icon-poker.svg' ?>" alt=''> poker
                         </a>
                     </div>
                     <div class="col-6 mobile-nav-tile">
                         <a href="./horse">
-                            <img src="<?php echo get_template_directory_uri() . '/assets/img/new/icon-horses.svg' ?>"> horses
+                            <img src="<?php echo get_template_directory_uri() . '/assets/img/new/icon-horses.svg' ?>" alt=''> horses
                         </a>
                     </div>
                     <div class="col-6 mobile-nav-tile">
                         <a href="./finance">
-                            <img src="<?php echo get_template_directory_uri() . '/assets/img/new/icon-financials.svg' ?>"> financials
+                            <img src="<?php echo get_template_directory_uri() . '/assets/img/new/icon-financials.svg' ?>" alt=''> financials
                         </a>
                     </div>
                 </nav>
-                <!-- <div class="row no-gutters nav-body nav-promo">
+                <div class="row no-gutters nav-body nav-promo">
                     <h2>PROMO CONTENT COMING SOON</h2>
                 </div>
                 <div class="row no-gutters nav-body nav-account">
@@ -196,7 +197,7 @@
                 </div>
                 <div class="row no-gutters nav-body nav-loader">
                     <img class="svg" src="<?php echo get_template_directory_uri() . '/assets/img/new/logo-bo.svg' ?>" alt='' />
-                </div> -->
+                </div>
                 <!--<div class="row">
                     <div class="col-12 promotions">
                     <span><img src="<?php echo get_template_directory_uri() . '/assets/img/new/icon-gift.svg' ?>" alt='' /> </span> <span>VIEW OUR LATESTS PROMOTIONS</span>
@@ -210,4 +211,3 @@
     </header><!-- #mobile header -->
 
 	<div id="content" class="site-content">
-

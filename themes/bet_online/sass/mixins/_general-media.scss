@@ -1,0 +1,178 @@
+// @media all and (min-width: 991px) {
+//   /*------------- NAVIGATION -------------*/
+//   .layout-header {
+//     height: auto;
+//   }
+//   .layout-header .logo {
+//     padding: 15px 0;
+//     line-height: inherit;
+//   }
+//   .layout-header .logo img {
+//     height: 26px;
+//   }
+//   .layout-top-nav .categories a {
+//     margin: 0 15px;
+//     padding: 15px 12px 10px;
+//     transition: all 0.25s ease;
+//   }
+//   .layout-top-nav .categories a:last-child {
+//     margin-right: 0;
+//   }
+//   /*------------- FOOTER -------------*/
+//   .layout-footer {
+//     padding: 60px 0 30px;
+//   }
+//   .layout-footer .footer-flex--2 {
+//     order: 3;
+//   }
+//   .layout-footer .footer-flex--3 {
+//     order: 2;
+//   }
+//   .layout-footer .footer-quick-links {
+//     display: inline-block;
+//     margin: 0px auto 15px;
+//   }
+//   .layout-footer .footer-quick-links-mobile {
+//     display: none;
+//   }
+//   .layout-footer .transaction-list li {
+//     padding: 4px;
+//     height: 30px;
+//     margin: 5px 8px;
+//   }
+//   .layout-footer .help {
+//     display: inline-block;
+//     background: transparent;
+//     text-align: left;
+//   }
+//   .layout-footer h4 {
+//     margin: 0 0 15px;
+//     text-align: left;
+//     justify-content: left;
+//   }
+//   .layout-footer .help h4 {
+//     margin: 0 0 15px;
+//   }
+//   .layout-footer p {
+//     font-size: 12px;
+//     line-height: 24px;
+//     text-align: left;
+//     margin-bottom: 10px;
+//   }
+//   .layout-footer p a {
+//     font-size: 12px;
+//   }
+//   .layout-footer .transaction-list {
+//     text-align: left;
+//   }
+//   .layout-footer .links--2 {
+//     display: inline-block;
+//   }
+//   .layout-footer .help .tile.tile-flat {
+//     width: 115px;
+//   }
+//   .shrink .categories a {
+//     padding: 10px 12px 7px;
+//     transition: all 0.25s ease;
+//   }
+//   .shrink .logo img {
+//     display: inline-block;
+//     height: 22px;
+//   }
+// }
+
+// @media all and (min-width: 768px) {
+//   .no-mobile {
+//     display: inline-block;
+//   }
+//   .layout-header-session-icon {
+//     padding: 10px;
+//     margin: 0 5px 0 0;
+//     display: inline-flex;
+//   }
+//   .layout-header-session-betslip {
+//     background: #ee3536;
+//     display: inline-flex;
+//     align-items: center;
+//     height: 100%;
+//     padding: 10px 15px;
+//   }
+//   .layout-header-session-betslip .svg {
+//     margin-right: 15px;
+//     position: relative;
+//   }
+//   .layout-header-session-betslip .svg::after {
+//     content: '0';
+//     font-size: 16px;
+//     font-weight: 600;
+//     color: #ee3536;
+//   }
+//   .layout-header-session-betslip .svg #Shape {
+//     fill: #fff;
+//   }
+//   .layout-top-nav {
+//     display: block;
+//   }
+//   #layout-mobile-nav {
+//     display: none;
+//   }
+//   .layout-auth-nav .btn {
+//     border-radius: 3px;
+//     height: 30px;
+//     min-width: 120px;
+//   }
+//   .layout-auth-nav .btn + .btn {
+//     margin-left: 10px;
+//   }
+//   .layout-header-session-popdown {
+//     right: 40%;
+//   }
+//   .legal {
+//     margin-bottom: 0;
+//   }
+//   .legal p {
+//     justify-content: left;
+//     padding-bottom: 0;
+//   }
+//   .layout-footer-pages {
+//     justify-content: flex-end;
+//   }
+//   .faq h2 {
+//     font-size: 33px;
+//   }
+//   .faq .tile {
+//     width: 200px;
+//     height: 200px;
+//   }
+//   .faq .tile-content {
+//     font-size: 20px;
+//   }
+// }
+
+// @media all and (max-width: 361px) {
+//   #layout-mobile-nav * {
+//     transition: all 0.3s ease;
+//   }
+//   #layout-mobile-nav {
+//     height: 9vh;
+//   }
+//   #layout-mobile-nav.mobile-nav-active .logo-round {
+//     margin-top: 5px;
+//   }
+//   #layout-mobile-nav .logo-round {
+//     height: 42px;
+//     width: 42px;
+//     line-height: 42px;
+//   }
+//   #layout-mobile-nav .logo-round svg {
+//     margin-left: -5px;
+//     margin-top: 9px;
+//     width: 24px;
+//     max-height: 24px;
+//   }
+//   #layout-mobile-nav svg {
+//     margin: 5px auto;
+//     width: 28px;
+//     max-height: 28px;
+//   }
+// }

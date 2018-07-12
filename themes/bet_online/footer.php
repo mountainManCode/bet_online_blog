@@ -12,7 +12,7 @@
 ?>
 
 	</div><!-- #content -->
-	
+
 		<!-- FOOTER SECTION -->
 		<footer id="colophon" class="layout-footer">
 		 <div class="container footer-seo">
@@ -21,7 +21,7 @@
 						 <div class="col-lg-5">
 								 <h4>A TRUSTED & SAFE EXPERIENCE
 										 <span>
-												 <img class="svg" src="./assets/img/new/protection.svg" />
+												 <img class="svg" src="<?php echo get_template_directory_uri() . '/assets/img/new/protection.svg' ?>" />
 										 </span>
 								 </h4>
 								 <p>At BetOnline, our company's guiding principle is to establish long-lasting, positive relationships with
@@ -34,19 +34,19 @@
 								 <div class="tiles">
 										 <a href="#" onclick="alert('Todo: Link to page'); return false" class="tile tile-flat">
 												 <div class="tile-inner">
-														 <img class="svg" src="./assets/img/new/chat.svg" />BetOnline Live Chat</div>
+														 <img class="svg" src="<?php echo get_template_directory_uri() . '/assets/img/new/chat.svg' ?>" />BetOnline Live Chat</div>
 										 </a>
 										 <a href="#" onclick="alert('Todo: Link to page'); return false" class="tile tile-flat">
 												 <div class="tile-inner">
-														 <img class="svg" src="./assets/img/new/email.svg" />Email Us</div>
+														 <img class="svg" src="<?php echo get_template_directory_uri() . '/assets/img/new/email.svg' ?>" />Email Us</div>
 										 </a>
 										 <a href="#" onclick="alert('Todo: Link to page'); return false" class="tile tile-flat">
 												 <div class="tile-inner">
-														 <img class="svg" src="./assets/img/new/telephone.svg" />Speak to Us</div>
+														 <img class="svg" src="<?php echo get_template_directory_uri() . '/assets/img/new/telephone.svg' ?>" />Speak to Us</div>
 										 </a>
 										 <a href="#" onclick="alert('Todo: Link to page'); return false" class="tile tile-flat">
 												 <div class="tile-inner">
-														 <img class="svg" src="./assets/img/new/info.svg" />Visit Our Help Center</div>
+														 <img class="svg" src="<?php echo get_template_directory_uri() . '/assets/img/new/info.svg' ?>" />Visit Our Help Center</div>
 										 </a>
 								 </div>
 						 </div>
@@ -86,7 +86,7 @@
 		 </div>
  <!-- </section> -->
 	</footer><!-- #colophon -->
-</div>#page
+</div> <!-- #page -->
 
 <?php wp_footer(); ?>
 
