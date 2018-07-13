@@ -19,28 +19,28 @@ get_header(); ?>
 					  </header>
 				  <?php endif; ?>
 
-          <section class="front-page__latest-articles">
-          <ul class="latest-article-wrapper"></ul>
-            <?php /* Start the Loop */
-              $args = array( 'posts_per_page' => 5, 'orderby' => 'date', 'orderby' => 'DEC');
-              $latest_articles = get_posts( $args );
+          <section class="front-page__latest-articles articles-container">
+            <ul class="article-list">
+              <?php /* Start the Loop */
+                $args = array( 'posts_per_page' => 5, 'orderby' => 'date', 'orderby' => 'DEC');
+                $latest_articles = get_posts( $args );
 
-              foreach ( $latest_articles as $post ) : setup_postdata( $post ); ?>
-              
-              <?php get_template_part( 'template-parts/content', 'latest-articles' ); ?>
+                foreach ( $latest_articles as $post ) : setup_postdata( $post ); 
+              ?>
+                
+              <?php get_template_part( 'template-parts/content', 'articles' ); ?>
 
-              <?php endforeach; 
-              wp_reset_postdata();?>
+              <?php endforeach; wp_reset_postdata();?>
 
               <?php else : ?>
 
               <?php get_template_part( 'template-parts/content', 'none' ); ?>
+            </ul>
 
           </section>
-        <?php endif; ?> <!-- if ( have_posts() ) -->
-</ul>
+        <?php endif; ?>
         
-      </section>
+      </section> <!-- front-page-wrapper -->
     </main>
   </div>
 
