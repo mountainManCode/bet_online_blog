@@ -1,3 +1,45 @@
+<section>
+  <!-- <?php 
+
+
+$getcategories = get_the_category();
+foreach( $getcategories as $category ){
+ $sub_category = $category;
+echo '<pre>';
+
+print_r($category);
+
+echo '</pre>';
+} ?>
+<?php
+  $related = new WP_Query(
+    array(
+        'category__in'   => wp_get_post_categories( $post->ID ),
+        'posts_per_page' => 5,
+        'post__not_in'   => array( $post->ID )
+    )
+);
+
+
+if( $related->have_posts() ) { 
+    while( $related->have_posts() ) { 
+        $related->the_post(); 
+        /*whatever you want to output*/
+    }?>
+ ?>
+ <a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a> 
+<?php
+ 
+ wp_reset_postdata();
+ 
+}
+?>  -->
+  </section>
+
+
+
+
+<!-- '''''''''''''' -->
 <?php
 /**
  * Template part for displaying Latest Articles posts.
@@ -52,3 +94,40 @@
 	</footer><!-- .entry-footer -->
 </article><!-- #post-<?php the_ID(); ?> -->
 <!-- </section> -->
+
+
+<!-- MOBILE NAV MENU asdgsgdsgsdgdsgsdg -->
+
+ <!-- mobile nav-->
+    <header id="layout-mobile-nav">
+        <nav class="container-fluid">
+            <div class="row no-gutters nav-menu">
+                <div class="col">
+                    <div data-nav="promo" class="logo-wrapper">
+                        <img class="svg" src="<?php echo get_template_directory_uri() . '/assets/img/new/icon-gift.svg' ?>" alt='' />
+                    </div>
+                </div>
+                <div class="col">
+                    <div data-nav="account" class="logo-wrapper">
+                        <img class="svg" src="<?php echo get_template_directory_uri() . '/assets/img/new/logo-my-account.svg' ?>" alt='' />
+                    </div>
+                </div>
+                <div class="col">
+                    <div data-nav="home" class="logo-round">
+                        <img class="svg" src="<?php echo get_template_directory_uri() . '/assets/img/new/logo-bo.svg' ?>" alt='' />
+                    </div>
+                </div>
+                <div class="col">
+                    <div data-nav="deposit" class="logo-wrapper">
+                        <img class="svg" src="<?php echo get_template_directory_uri() . '/assets/img/new/logo-sportsbook.svg' ?>" alt='' />
+                    </div>
+                </div>
+                <div class="col">
+                    <div data-nav="betslip" class="logo-wrapper">
+                        <img class="svg" src="<?php echo get_template_directory_uri() . '/assets/img/new/logo-betslip.svg' ?>" alt='' />
+                    </div>
+                </div>
+                </ul>
+        </nav>
+        <div class="mobile-nav-content nav--home">
+            <div class="container-fluid">

@@ -1,3 +1,26 @@
-h1, h2, h3, h4, h5, h6 {
-	clear: both;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  clear: both;
+}
+
+h1 {
+  font-family: $font__main;
+  font-size: $font-size_text-headline;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: $color__text-headline;
+}
+
+h1 {
+  font-size: 15px;
+  font-family: $font__main;
+  font-weight: bold;
+  color: $color__text-headline;
 }

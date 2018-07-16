@@ -21,10 +21,13 @@
 		if ( 'post' === get_post_type() ) :
 			?>
 			<div class="entry-meta">
-				<?php
+				<span><?php echo get_avatar( get_the_author_meta('user_email'), $size = '50'); ?></span>
+				<span>By <?php echo get_the_author_meta('display_name') ?></span>
+				<span id='article__date' class='article__date'> - <?php echo get_the_date(); ?></span>
+				<!-- <?php
 				bet_online_posted_on();
 				bet_online_posted_by();
-				?>
+				?> -->
 			</div><!-- .entry-meta -->
 		<?php endif; ?>
 	</header><!-- .entry-header -->

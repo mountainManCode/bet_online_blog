@@ -116,13 +116,29 @@ function bet_online_widgets_init() {
 }
 add_action( 'widgets_init', 'bet_online_widgets_init' );
 
+function list_hierarchical_terms($atts) {
+	global $post;
+	$taxonomy = $atts['taxonomy']; // change this to your taxonomy
+	$separator = '';
+	$out = '';
+	$terms = wp_get_object_terms( $post->ID, $taxonomy, array( "fields" => "names" ) );
+	foreach($terms as $term ) {
+		$out .= $separator . $term;
+		$separator = $atts['separator'];
+	}
+	return $out;
+}
+
 /**
  * Enqueue scripts and styles.
  */
 function bet_online_scripts() {
-	wp_enqueue_style( 'bet_online-style', get_stylesheet_uri() );
 
 	wp_enqueue_style( 'bs_css', 'https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css' );
+
+	wp_enqueue_style( 'fonts', 'https://fonts.googleapis.com/css?family=Open+Sans', false );
+
+	wp_enqueue_style( 'bet_online-style', get_stylesheet_uri() );
 
 	wp_enqueue_script('jquery', 'https://code.jquery.com/jquery-3.2.1.min.js');
 

@@ -259,8 +259,7 @@
 }
 .layout-top-nav .categories {
   display: inline-flex;
-  justify-content: center;
-  min-width: 100%;
+  justify-content: flex-end;
 }
 .layout-top-nav .categories a {
   color: #90918d;

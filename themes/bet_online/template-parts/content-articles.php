@@ -14,22 +14,30 @@
     ) ),
   )  ) ) :
 ?>
-<!-- <article id="post-<?php the_ID(); ?>" class="article-wrapper"> -->
 
-  <li class="article-wrapper" style="background-image: url('<?php echo $article_hero[0]; ?>')">
-  <a href="<?php echo get_permalink();?>"	class="article-link">
-    <div class="article__posted-date">
-      <?php bet_online_posted_on(); ?>
-    </div>
-    <div class='article__excerpt'>
-      <?php the_title();?>
-    </div>
-  </a>
+  <li class="article-list">
+    <a href="<?php echo get_permalink();?>"	class="article-link">
+      <article id="post-<?php the_ID(); ?>" class="article-wrapper" style="background-image: url('<?php echo $article_hero[0]; ?>')">
+
+        <section id='article__content' class='article__content'>
+          <div class="article__top-content">
+
+            <object>
+              <span id='article__category' class='article__category'><?php echo get_the_category_list(', '); ?></span>
+            </object>
+            <span id='article__date' class='article__date'><?php echo get_the_date(); ?></span>
+
+          </div>
+    
+          <div id='article__title' class='article__title'>
+            <?php the_title();?>
+          </div>
+
+        </section>
+      </article>
+    </a>
   </li>
-      <!-- </article> <!-- #post-<?php the_ID(); ?> -->
 
     
 <?php endif; ?>
-	<!-- <footer class="entry-footer">
-		<?php bet_online_entry_footer(); ?>
-	</footer>entry-footer -->
+
