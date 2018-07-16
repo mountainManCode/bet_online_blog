@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="165px" height="46px" viewBox="0 0 165 46" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49 (51002) - http://www.bohemiancoding.com/sketch -->
+    <title>Group 13 Copy</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <filter x="-1.6%" y="-3.4%" width="103.1%" height="106.9%" filterUnits="objectBoundingBox" id="filter-1">
+            <feOffset dx="0" dy="0" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="3" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.252689085 0" type="matrix" in="shadowBlurOuter1" result="shadowMatrixOuter1"></feColorMatrix>
+            <feMerge>
+                <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
+                <feMergeNode in="SourceGraphic"></feMergeNode>
+            </feMerge>
+        </filter>
+        <polygon id="path-2" points="0 0 146.553516 4.05009359e-14 139.649682 26.3919877 0 26.3919877"></polygon>
+        <filter x="-1.0%" y="-5.7%" width="104.1%" height="122.7%" filterUnits="objectBoundingBox" id="filter-3">
+            <feOffset dx="2" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="0.5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.114243659 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="Promos" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="1.1_BOL_Promos_FullScreen" transform="translate(-732.000000, -1074.000000)">
+            <g id="Group-8" filter="url(#filter-1)" transform="translate(738.000000, 1080.000000)">
+                <g id="Group-13-Copy">
+                    <g id="Group-4-Copy-4">
+                        <g id="Group-9">
+                            <g id="Group-34-Copy-3">
+                                <g id="Group-18" transform="translate(0.000000, 0.730653)">
+                                    <g id="Rectangle-28-Copy-2">
+                                        <use fill="black" fill-opacity="1" filter="url(#filter-3)" xlink:href="#path-2"></use>
+                                        <use fill="#2D2E2C" fill-rule="evenodd" xlink:href="#path-2"></use>
+                                    </g>
+                                </g>
+                                <polygon id="Path-3" fill="#90918D" points="0.185156822 26.9217825 10.4892404 35.1052395 10.4892404 27.0173688"></polygon>
+                                <polygon id="Path-4" fill="#90918D" points="146.498952 0.719970703 154.01334 7.2 144.840015 7.2"></polygon>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
