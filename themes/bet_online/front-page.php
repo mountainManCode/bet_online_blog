@@ -11,8 +11,18 @@ get_header(); ?>
 		<main id="main" class="site-main" role="main">
       <div class="front-page-wrapper">
 
-        <section class="front-page__latest-articles container">
-          <h2>Latest Articles</h2>
+        <section class="front-page__latest-articles x-container">
+					<div class="header">
+						<div class="header__wrapper-outer">
+							<h2 class="header__tag">Latest Articles</h2>
+							<div class="header__wrapper-inner">
+								<img class="svg" src="<?php echo get_template_directory_uri() . '/assets/img/new/icon-tag-right.svg' ?>">
+								<div id="header__icon" class="header__icon">
+									<img class="svg" src="<?php echo get_template_directory_uri() . '/assets/img/new/icon-latest-articles.svg' ?>">
+								</div>
+							</div>
+						</div>
+					</div>
 		
 				  <?php if ( have_posts() ) : ?>
 
@@ -43,10 +53,18 @@ get_header(); ?>
           </section> <!-- End of LATEST ARTICLES -->
 
         <!-- CATEGORY SPORTS -->
-        <section class="front-page__latest-articles container">
-          <h2>
-            Sports
-          </h2>
+        <section class="front-page__latest-articles x-container">
+					<div class='header'>
+						<div class="header__wrapper-outer">
+							<h2 class="header__tag">Sports</h2>
+							<div class="header__wrapper-inner">
+								<img class="svg" src="<?php echo get_template_directory_uri() . '/assets/img/new/icon-tag-right.svg' ?>">
+								<div class="header__icon">
+									<img class="svg" src="<?php echo get_template_directory_uri() . '/assets/img/new/sports.svg' ?>" />
+								</div>
+							</div>
+						</div>
+					</div>
           <ul class="articles-container">
             <?php
               $args = array(
@@ -71,10 +89,18 @@ get_header(); ?>
         </section> <!-- End of CATEGORY SPORTS -->
 
         <!-- CATEGORY CASINO -->
-        <section class="front-page__latest-articles container">
-          <h2>
-            Casino
-          </h2>
+        <section class="front-page__latest-articles x-container">
+					<div class='header'>
+						<div class="header__wrapper-outer">
+							<h2 class="header__tag">Casino</h2>
+							<div class="header__wrapper-inner">
+								<img class="svg" src="<?php echo get_template_directory_uri() . '/assets/img/new/icon-tag-right.svg' ?>">
+								<div class="header__icon">
+									<img class="svg" src="<?php echo get_template_directory_uri() . '/assets/img/new/casino.svg' ?>" />
+								</div>
+							</div>
+						</div>
+					</div>
           <ul class="articles-container">
             <?php
               $args = array(
@@ -99,10 +125,18 @@ get_header(); ?>
         </section> <!-- End of CATEGORY CASINO -->
 
         <!-- CATEGORY HORSES -->
-        <section class="front-page__latest-articles container">
-          <h2>
-            Horses
-          </h2>
+        <section class="front-page__latest-articles x-container">
+					<div class="header">
+						<div class="header__wrapper-outer">
+							<h2 class="header__tag">Horses</h2>
+							<div class="header__wrapper-inner">
+								<img class="svg" src="<?php echo get_template_directory_uri() . '/assets/img/new/icon-tag-right.svg' ?>">
+								<div class="header__icon">
+									<img class="svg" src="<?php echo get_template_directory_uri() . '/assets/img/new/horses.svg' ?>" />
+								</div>
+							</div>
+						</div>
+					</div>
           <ul class="articles-container">
             <?php
               $args = array(
@@ -128,124 +162,7 @@ get_header(); ?>
 
         <!-- PROMOTIONS SECTION -->
     <section class="promotions">
-        <div class="container">
-            <hgroup>
-                <h2>BLOG PROMOTIONS</h2>
-                <a href="#" onclick="alert('Todo: Link to page'); return false">See All Blog Promotions</a>
-            </hgroup>
-            <div class="row">
-                <div class="col-12 col-lg-4">
-                    <div class="tile tile--1">
-                        <div class="icon-tag-wrapper-outer">
-                            <div class="icon-tag-wrapper-inner">
-                                <img class="svg" src="<?php echo get_template_directory_uri() . '/assets/img/new/tag-promo.svg' ?>">
-                                <div class="promo-tag">Blog Promotion</div>
-                            </div>
-                        </div>
-                        <div class="tile-content">
-                            <div class="tile-content--inner">
-                                <div class="tile-content-upper">
-                                    <img class="tile-content-bg" src="<?php echo get_template_directory_uri() . '/assets/img/new/icon-faq-bg.jp g' ?>">
-                            ?<div class="tile-content-upper-inner">
-                                        <div class="promo-heading">BLOG BONUS</div>
-                                        <span class="promo-subheading">MOBILE BETTING</span>
-                                    </div>
-                                </div>
-                                <div class="tile-content-lower">
-                                    <div class="icon-wrapper">
-                                        <img class="svg" src="<?php echo get_template_directory_uri() . '/assets/img/new/casino.svg' ?>">
-                            ?</div>
-                                    <a class="learn-more" data-toggle="collapse" href="#promo1" role="button" aria-expanded="false" aria-controls="promo1">More Info</a>
-                                    <div id="promo1" class="tile-content-expanded collapse">
-                                        <p>LIFE BONUS… that’s the promo code you need to use whenever you make a qualifying
-                                            reload to score the most generous reload bonus program in the industry – our
-                                            Lifetime Bonus Guarantee. Once your deposit goes through you will score a 25%
-                                            Sportsbook Bonus. To maximize the value off of your bonus, you can score up to
-                                            $1,000 worth of free plays per qualifying reload.</p>
-                                    </div>
-                                    <a class="btn" href="#" onclick="alert('Todo: Link to page'); return false">CLAIM NOW!</a>
-                                    <a class="terms" href="#" onclick="alert('Todo: Link to page'); return false">Terms & Conditions</a>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-                <div class="col-12 col-lg-4">
-                    <div class="tile tile--1">
-                        <div class="icon-tag-wrapper-outer">
-                            <div class="icon-tag-wrapper-inner">
-                                <img class="svg" src="<?php echo get_template_directory_uri() . '/assets/img/new/tag-promo.svg' ?>">
-                                <div class="promo-tag">Blog Promotion</div>
-                            </div>
-                        </div>
-                        <div class="tile-content">
-                            <div class="tile-content--inner">
-                                <div class="tile-content-upper">
-                                    <img class="tile-content-bg" src="<?php echo get_template_directory_uri() . '/assets/img/new/icon-faq-bg.jp g' ?>">
-                            ?<div class="tile-content-upper-inner">
-                                        <div class="promo-heading">BLOG BONUS</div>
-                                        <span class="promo-subheading">MOBILE BETTING</span>
-                                    </div>
-                                </div>
-                                <div class="tile-content-lower">
-                                    <div class="icon-wrapper">
-                                        <img class="svg" src="<?php echo get_template_directory_uri() . '/assets/img/new/casino.svg' ?>">
-                            ?</div>
-                                    <a class="learn-more" data-toggle="collapse" href="#promo2" role="button" aria-expanded="false" aria-controls="promo2">More Info</a>
-                                    <div id="promo2" class="tile-content-expanded collapse">
-                                        <p>LIFE BONUS… that’s the promo code you need to use whenever you make a qualifying
-                                            reload to score the most generous reload bonus program in the industry – our
-                                            Lifetime Bonus Guarantee. Once your deposit goes through you will score a 25%
-                                            Sportsbook Bonus. To maximize the value off of your bonus, you can score up to
-                                            $1,000 worth of free plays per qualifying reload.</p>
-                                    </div>
-                                    <a class="btn" href="#" onclick="alert('Todo: Link to page'); return false">CLAIM NOW!</a>
-                                    <a class="terms" href="#" onclick="alert('Todo: Link to page'); return false">Terms & Conditions</a>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-                <div class="col-12 col-lg-4">
-                    <div class="tile tile--1">
-                        <div class="icon-tag-wrapper-outer">
-                            <div class="icon-tag-wrapper-inner">
-                                <img class="svg" src="<?php echo get_template_directory_uri() . '/assets/img/new/tag-promo.svg' ?>">
-                                <div class="promo-tag">Blog Promotion</div>
-                            </div>
-                        </div>
-                        <div class="tile-content">
-                            <div class="tile-content--inner">
-                                <div class="tile-content-upper">
-                                    <img class="tile-content-bg" src="<?php echo get_template_directory_uri() . '/assets/img/new/icon-faq-bg.jp g' ?>">
-                            ?<div class="tile-content-upper-inner">
-                                        <div class="promo-heading">BLOG BONUS</div>
-                                        <span class="promo-subheading">MOBILE BETTING</span>
-                                    </div>
-                                </div>
-                                <div class="tile-content-lower">
-                                    <div class="icon-wrapper">
-                                        <img class="svg" src="<?php echo get_template_directory_uri() . '/assets/img/new/casino.svg' ?>">
-                            ?</div>
-                                    <a class="learn-more" data-toggle="collapse" href="#promo3" role="button" aria-expanded="false" aria-controls="promo3">More Info</a>
-                                    <div id="promo3" class="tile-content-expanded collapse">
-                                        <p>LIFE BONUS… that’s the promo code you need to use whenever you make a qualifying
-                                            reload to score the most generous reload bonus program in the industry – our
-                                            Lifetime Bonus Guarantee. Once your deposit goes through you will score a 25%
-                                            Sportsbook Bonus. To maximize the value off of your bonus, you can score up to
-                                            $1,000 worth of free plays per qualifying reload.</p>
-                                    </div>
-                                    <a class="btn" href="#" onclick="alert('Todo: Link to page'); return false">CLAIM NOW!</a>
-                                    <a class="terms" href="#" onclick="alert('Todo: Link to page'); return false">Terms & Conditions</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+			<?php get_template_part('template-parts/content', 'promotions'); ?>
     </section>
         
       </div> <!-- front-page-wrapper -->

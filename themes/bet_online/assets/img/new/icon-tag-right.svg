@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="55.453" height="40.49" viewBox="0 0 55.453 40.49">
+  <defs>
+    <filter id="a" x="-3.647" y="-5.61" width="112.5" height="119.3" name="filter-2">
+      <feOffset result="shadowOffsetOuter1" dx="2" dy="2" in="SourceAlpha"/>
+      <feGaussianBlur result="shadowBlurOuter1" stdDeviation="0.5" in="shadowOffsetOuter1"/>
+      <feColorMatrix values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.114 0" in="shadowBlurOuter1"/>
+    </filter>
+  </defs>
+  <title>Header_Bannner_V2</title>
+  <g>
+    <g filter="url(#a)">
+      <polygon points="55.453 0.049 7.412 0.049 15.177 31.099 55.453 31.099 55.453 0.049"/>
+    </g>
+    <polygon points="55.453 0.049 7.412 0.049 15.177 31.099 55.453 31.099 55.453 0.049" fill="#e7e7e7"/>
+  </g>
+  <polygon points="55.271 30.862 45.13 40.49 45.13 30.975 55.271 30.862" fill="#90918d"/>
+  <polygon points="7.395 0 0 7.041 9.028 7.041 7.395 0" fill="#90918d"/>
+</svg>
