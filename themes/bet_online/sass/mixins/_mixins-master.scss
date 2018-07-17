@@ -21,6 +21,34 @@
   }
 }
 
+// Image Opacity Overlay
+@mixin dark-overlay {
+  &:after {
+    content: '';
+    width: 100%;
+    height: auto;
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+  }
+}
+@mixin dark-overlay-hover {
+  &:hover {
+    content: '';
+    width: 100%;
+    height: auto;
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+  }
+}
+
 // Center block
 @mixin center-block {
   display: block;
