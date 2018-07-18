@@ -1,0 +1,35 @@
+@mixin author-meta-styles-small {
+  span {
+    font-size: $font-size__main;
+    color: $color__text-style-1;
+  }
+  .article__author-avatar {
+    height: 30px;
+    width: 30px;
+    .avatar {
+      border-radius: 50%;
+    }
+  }
+  .article__author-name {
+    color: $color__text-style-2;
+    font-weight: 600;
+  }
+}
+
+@mixin author-meta-styles-big {
+  span {
+    font-size: $font-size__main-secondary;
+    color: $color__text-style-1;
+  }
+  .article__author-avatar {
+    .avatar {
+      height: 60px;
+      width: 60px;
+      border-radius: 50%;
+    }
+  }
+  .article__author-name {
+    color: $color__text-style-2;
+    font-weight: 600;
+  }
+}

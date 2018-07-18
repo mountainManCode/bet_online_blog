@@ -1,11 +1,18 @@
-.site-content aside.widget-area {
-  // overflow: hidden;
+.site-content .post aside.widget-area {
+  position: sticky;
+  top: 50px;
+}
+
+aside.widget-area {
+  height: 100%;
+  width: 100%;
   display: flex;
   flex-flow: column nowrap;
   justify-content: flex-start;
   align-content: center;
   width: 34%;
   padding-left: 50px;
+  margin: 0;
   @include header-styles;
 
   .widget-title {
@@ -23,6 +30,8 @@
     flex: 1 1 auto;
     text-decoration: none;
     margin: 30px 0;
+    min-height: 100%;
+    height: 80px;
 
     a img {
       flex: 2 1 0;
@@ -40,7 +49,7 @@
       // max-width: 250px;
 
       .tptn_title {
-        font-family: OpenSans;
+        font-family: $font__main;
         font-size: 16px;
         font-weight: 600;
         font-style: normal;
@@ -49,19 +58,19 @@
         text-overflow: ellipsis;
         line-height: 1.25;
         letter-spacing: normal;
-        color: #4a4a4a;
+        color: $color__text-main;
         max-height: 50px;
       }
 
       .tptn_date {
-        font-family: OpenSans;
-        font-size: 10px;
+        font-family: $font__main;
+        font-size: $font-size__article-tn-date;
         font-weight: normal;
         font-style: normal;
         font-stretch: normal;
         line-height: 1.2;
         letter-spacing: normal;
-        color: #989898;
+        color: $color__text-date;
       }
     }
   }

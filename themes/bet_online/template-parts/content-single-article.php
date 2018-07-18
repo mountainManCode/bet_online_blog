@@ -10,9 +10,12 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<header class="entry-header">
 
-  <h3 class="nav-hierarchy"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a> > 
+	<section class="entry-content-container">
+	<div class="entry-content__area">
+
+<header class="entry-header">
+  <h4 class="nav-hierarchy"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a> > 
   <span>
   <?php  $taxonomy = 'category'; 
   // ID Gets which assign post 
@@ -42,10 +45,10 @@
 </span>
 
       <!-- <span><?php get_category_parents( $cat, true, ' &raquo; ' ); ?></span>
-      <span><?php get_the_category('id'); ?></span> -->
-      <span> > <?php the_title(); ?></span>
+			<span><?php get_the_category('id'); ?></span> -->
+      <span> > <?php the_title('<span class="nav-current-article">', '</span>'); ?></span>
       
-</h3>
+</h4>
 
 		<?php
 		if ( is_singular() ) :
@@ -60,7 +63,8 @@
 			<div class="entry-meta">
 
 				<span class="article__author-avatar"><?php echo get_avatar( get_the_author_meta('user_email'), $size = '50'); ?></span>
-				<span class="article__author-name">By <?php echo get_the_author_meta('display_name') ?></span>
+				<span>By </span>
+				<span class="article__author-name"><?php echo get_the_author_meta('display_name') ?></span>
 				<span id='article__date' class='article__date'> - <?php echo get_the_date(); ?></span>
 
 			</div><!-- .entry-meta -->
@@ -90,16 +94,15 @@
 		) );
 		?>
   </div><!-- .entry-content -->
-  
 
-
-	<footer class="entry-footer">
-
-		<span class="article__author-avatar"><?php echo get_avatar( get_the_author_meta('user_email'), $size = '50'); ?></span>
-		<span class="article__author-name">By <?php echo get_the_author_meta('display_name') ?></span>
-    <span id='article__date' class='article__date'> - <?php echo get_the_date(); ?></span>
-    
-	</footer><!-- .entry-footer -->
-	<?php
-get_sidebar(); ?>
+			<footer class="entry-footer">
+				<span class="article__author-avatar"><?php echo get_avatar( get_the_author_meta('user_email'), $size = '50'); ?></span>
+				<span> By </span>
+				<span class="article__author-name"><?php echo get_the_author_meta('display_name') ?></span>
+				<span id='article__date' class='article__date'> - <?php echo get_the_date(); ?></span>
+			</footer><!-- .entry-footer -->
+			
+		</div>
+		<?php get_sidebar(); ?>
+	</section> <!-- .entry-content -->
 </article><!-- #post-<?php the_ID(); ?> -->
