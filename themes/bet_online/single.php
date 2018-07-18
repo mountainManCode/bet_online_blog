@@ -21,6 +21,11 @@ get_header();
 
 		endwhile; // End of the loop.
 		?>
+
+	<section class='betting-101'>
+		<?php get_template_part('template-parts/content', 'betting-101'); ?>
+	</section>
+
 	<section class='promotions'>
 		<?php get_template_part('template-parts/content', 'promotions'); ?>
 	</section>
@@ -33,6 +38,4 @@ get_header();
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
-<?php
-get_sidebar();
-get_footer();
+<?php get_footer(); ?>

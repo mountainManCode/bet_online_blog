@@ -1,6 +1,6 @@
 <?php
 /**
- * Template part for displaying posts
+ * Template part for displaying single posts
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
@@ -99,5 +99,7 @@
 		<span class="article__author-name">By <?php echo get_the_author_meta('display_name') ?></span>
     <span id='article__date' class='article__date'> - <?php echo get_the_date(); ?></span>
     
-  </footer><!-- .entry-footer -->
+	</footer><!-- .entry-footer -->
+	<?php
+get_sidebar(); ?>
 </article><!-- #post-<?php the_ID(); ?> -->

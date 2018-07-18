@@ -1,3 +1,11 @@
+<?php
+/**
+ * Template part for displaying Blog Promotions.
+ *
+ * @package Bet_Online
+ */
+?>
+
 <div class="container">
             <hgroup>
                 <h2>BLOG PROMOTIONS</h2>

@@ -23,33 +23,27 @@ get_header(); ?>
 							</div>
 						</div>
 					</div>
-		
-				  <?php if ( have_posts() ) : ?>
-
-				  <?php if ( ! is_home() && ! is_front_page() ) : ?>
-				  	<header>
-					  	<h1 class="page-title screen-reader-text"><?php single_post_title(); ?></h1>
-					  </header>
-				  <?php endif; ?>
             <ul class="articles-container">
 
-              <?php /* Start the Loop */
-                $args = array( 'posts_per_page' => 5, 'orderby' => 'date', 'orderby' => 'DEC');
-                $latest_articles = get_posts( $args );
+						<?php
+              $args = array(
+								'post_type' => 'post', 'post__not_in' => array( 2, 3, 4, 5, 6, 15 ), 'posts_per_page' => 5, 'orderby' => 'date', 'orderby' => 'DEC' 
+							);
+              $arr_posts = new WP_Query( $args );
 
-                foreach ( $latest_articles as $post ) : setup_postdata( $post ); 
-              ?>
+            if ( $arr_posts->have_posts() ) :
+
+              while ( $arr_posts->have_posts() ) :
+                $arr_posts->the_post();
+            ?>
                 
-              <?php get_template_part( 'template-parts/content', 'articles' ); ?>
+								<?php get_template_part( 'template-parts/content', 'articles' ); ?>
+								
+							<?php endwhile; ?>
 
-              <?php endforeach; wp_reset_postdata();?>
+						<?php endif; ?>
+						</ul>	
 
-              <?php else : ?>
-
-              <?php get_template_part( 'template-parts/content', 'none' ); ?>
-            
-            </ul>
-            <?php endif; ?>
           </section> <!-- End of LATEST ARTICLES -->
 
         <!-- CATEGORY SPORTS -->
@@ -70,7 +64,7 @@ get_header(); ?>
               $args = array(
                 'post_type' => 'post',
                 'post_status' => 'publish',
-                'category_name' => 'NFL',
+                'category_name' => 'sports',
                 'posts_per_page' => 5,
               );
               $arr_posts = new WP_Query( $args );
