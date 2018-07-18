@@ -163,7 +163,15 @@ get_header(); ?>
         <!-- PROMOTIONS SECTION -->
     <section class="promotions">
 			<?php get_template_part('template-parts/content', 'promotions'); ?>
-    </section>
+		</section>
+		
+		<!--  FRONT-PAGE CONTENT SECTION -->
+		<section class="entry-content">
+			<div class="entry-content__area"><?php the_content(); ?></div>
+			<!-- <div class="widget-area"> -->
+				<?php get_sidebar(); ?>
+			<!-- </div> -->
+		</section><!-- .entry-content -->
         
       </div> <!-- front-page-wrapper -->
     </main>

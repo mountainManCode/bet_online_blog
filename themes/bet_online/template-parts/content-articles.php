@@ -8,7 +8,7 @@
 ?>
 
 <?php 
-  if ( $article_hero = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'medium-large',  array(
+  if ( $article_hero = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'medium',  array(
     'alt' => the_title_attribute( array(
       'echo' => false,
     ) ),

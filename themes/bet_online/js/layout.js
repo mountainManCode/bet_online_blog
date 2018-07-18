@@ -4,8 +4,13 @@
  * Handles toggling the navigation menu.
  */
 
-// $(document).ready(function() {
 (function($) {
+  //append Divs and images to SideBar Widget Title.
+  // $('<p>Test</p>').prependTo('.#');
+  // $('<img class=\'svg\' src=\'../assets/img/new/icon-tag-right.svg\'>').appendTo(
+  //   '#header__wrapper-inner'
+  // );
+
   // NAV
   $('.layout-header-session-balance').click(function() {
     $('.layout-header-session-popdown').toggleClass(
