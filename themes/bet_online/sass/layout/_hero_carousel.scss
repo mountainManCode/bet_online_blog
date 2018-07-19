@@ -1,0 +1,107 @@
+.hero-carousel {
+  // min-height: 80vh;
+  height: 85vh;
+  width: 100vw;
+  border: 1px solid #000;
+  display: flex;
+  // flex-flow: row nowrap;
+  // justify-content: space-between;
+  position: relative;
+
+  .hero-article {
+    height: 100%;
+    min-height: 100%;
+    width: 100%;
+    min-width: 100%;
+    position: relative;
+    display: flex;
+    align-content: flex-end;
+    align-items: flex-end;
+
+    margin: 0;
+    padding: 0;
+    background-color: lightblue;
+    text-align: center;
+    color: yellow;
+    font-size: 2em;
+    li {
+      height: 100%;
+      width: 100%;
+
+      article {
+        min-height: 100%;
+        min-width: 100%;
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+    }
+  }
+  .slider-nav {
+    // flex-basis: 36%;
+    width: 100%;
+    max-width: 450px;
+    height: 100%;
+    // max-height: 160px;
+    position: absolute;
+    // display: flex;
+    // flex-flow: column nowrap;
+    // justify-content: flex-end;
+    // align-content: flex-end;
+    // align-items: flex-end;
+    // align-self: flex-end;
+
+    top: 0;
+    right: 0px;
+    z-index: 3;
+
+    .slick-list,
+    .slick-track {
+      height: 100%;
+      min-height: 100%;
+      max-width: 100%;
+      display: flex;
+      flex-flow: column;
+      justify-content: flex-end;
+      align-items: flex-end;
+    }
+
+    li.slick-slide {
+      border-color: blue;
+      // padding: 2px 0;
+      height: 100%;
+      max-height: 180px;
+      max-width: 100%;
+      display: flex;
+      // flex-flow: row nowrap;
+      overflow: hidden;
+      // width: 160px;
+
+      article.article-wrapper {
+        width: 100%;
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+      }
+
+      .article__meta {
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: space-between;
+      }
+      img {
+        height: 100%;
+        // min-heigh
+        width: 100%;
+        max-width: 160px;
+        margin: 0;
+      }
+    }
+  }
+  .slick-list,
+  .slick-track {
+    height: 100%;
+    // min-height: 100%;
+    width: 100%;
+    // display: flex;
+  }
+}

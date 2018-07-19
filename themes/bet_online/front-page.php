@@ -11,6 +11,15 @@ get_header(); ?>
 		<main id="main" class="site-main" role="main">
       <div class="front-page-wrapper">
 
+			<section id="hero-carousel" class="hero-carousel">
+				<ul id="hero-article" class="hero-article">
+					<?php get_template_part( 'template-parts/content', 'slick-hero' ); ?>
+
+				<ul id="slider-nav" class="slider-nav">
+					<?php get_template_part( 'template-parts/content', 'slick-nav' ); ?>
+
+			</section>
+
         <section class="front-page__latest-articles x-container">
 					<div class="header">
 						<div class="header__wrapper-outer">

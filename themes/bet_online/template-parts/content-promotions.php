@@ -23,7 +23,7 @@
                         <div class="tile-content">
                             <div class="tile-content--inner">
                                 <div class="tile-content-upper">
-                                    <img class="tile-content-bg" src="<?php echo get_template_directory_uri() . '/assets/img/new/icon-faq-bg.jp g' ?>">
+                                    <img class="tile-content-bg" src="<?php echo get_template_directory_uri() . '/assets/img/new/icon-faq-bg.jpg' ?>">
                             ?<div class="tile-content-upper-inner">
                                         <div class="promo-heading">BLOG BONUS</div>
                                         <span class="promo-subheading">MOBILE BETTING</span>
@@ -60,7 +60,7 @@
                         <div class="tile-content">
                             <div class="tile-content--inner">
                                 <div class="tile-content-upper">
-                                    <img class="tile-content-bg" src="<?php echo get_template_directory_uri() . '/assets/img/new/icon-faq-bg.jp g' ?>">
+                                    <img class="tile-content-bg" src="<?php echo get_template_directory_uri() . '/assets/img/new/icon-faq-bg.jpg' ?>">
                             ?<div class="tile-content-upper-inner">
                                         <div class="promo-heading">BLOG BONUS</div>
                                         <span class="promo-subheading">MOBILE BETTING</span>
@@ -97,7 +97,7 @@
                         <div class="tile-content">
                             <div class="tile-content--inner">
                                 <div class="tile-content-upper">
-                                    <img class="tile-content-bg" src="<?php echo get_template_directory_uri() . '/assets/img/new/icon-faq-bg.jp g' ?>">
+                                    <img class="tile-content-bg" src="<?php echo get_template_directory_uri() . '/assets/img/new/icon-faq-bg.jpg' ?>">
                             ?<div class="tile-content-upper-inner">
                                         <div class="promo-heading">BLOG BONUS</div>
                                         <span class="promo-subheading">MOBILE BETTING</span>
