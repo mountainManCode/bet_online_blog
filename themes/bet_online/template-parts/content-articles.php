@@ -23,7 +23,13 @@
           <div class="article__top-content">
 
             <object>
-              <span id='article__category' class='article__category'><?php echo get_the_category_list(', '); ?></span>
+              <span id='article__category' class='article__category'>
+                <?php echo get_the_category_list(', '); ?>
+                <!-- <?php wp_list_categories( array('child_of' => 0 ) ) ?> -->
+                <!-- <?php $category = get_the_category(); 
+$parent = get_category($category[1]->category_parent);
+echo $parent->slug; ?> -->
+              </span>
             </object>
             <span id='article__date' class='article__date'><?php echo get_the_date(); ?></span>
 

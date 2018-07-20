@@ -1,35 +1,31 @@
 (function($) {
-  $('.hero-article').slick({
+  $('#hero-article').slick({
     arrows: false,
+    dots: true,
     // asNavFor: '.slider-nav',
     slidesToShow: 1,
     slidesToScroll: 1,
     speed: 500,
     fade: true,
-    cssEase: 'linear',
-    dots: true
-    // appendDots:
+    cssEase: 'linear'
   });
   // have both connect to the same class, and css the info
-  $('.slider-nav').slick({
+  $('#slider-nav').slick({
     arrows: false,
-    asNavFor: '.hero-article',
-    // adaptiveHeight: true,
-    dots: false,
+    asNavFor: '#hero-article',
+    // autoplay: true,
+    // autoplaySpeed: 3000,
     focusOnSelect: true,
     infinite: true,
     lazyLoad: 'ondemand',
     pauseOnDotsHover: true,
-    // rows: 1,
-    // slidePerRow: 4,
     slidesToShow: 4,
     slidesToScroll: 4,
     swipe: false,
-    // centerMode: true,
-    // centerPadding: '20px',
     vertical: true
-    // fade: true,
-    // cssEase: 'linear'
+    // appendDots: $('.append-dots'),
+    // dots: true,
+    // dotsClass: 'custom-dots'
 
     // the magic
     // responsive: [

@@ -207,7 +207,7 @@
       color: #ee3536;
       text-decoration: none;
     }
-    .article-wrapper {
+    article.article-wrapper {
       display: flex;
       position: relative;
       z-index: 1;
@@ -246,17 +246,19 @@
         .article__date {
           font-size: $font-size__article-tn-date;
           color: $color__text-date;
+        }
+        .article__title {
+          font-size: $font-size__article-tn-title;
+          color: #e7e7e7;
+          font-weight: 600;
+          // background-color: #000;
+          // opacity: 0.1;
           &:hover,
           &:focus,
           &:active {
             color: $color__link-hover;
             text-decoration: none;
           }
-        }
-        .article__title {
-          font-size: $font-size__article-tn-title;
-          color: #e7e7e7;
-          font-weight: 600;
         }
       }
     }

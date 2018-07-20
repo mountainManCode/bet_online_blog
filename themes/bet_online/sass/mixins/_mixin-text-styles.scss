@@ -1,0 +1,9 @@
+@mixin category-styles {
+  &after {
+    color: $color__text-cat;
+    font-family: $font__main;
+    font-size: $font-size__article-tn-category;
+    font-weight: 600;
+    line-height: 1;
+  }
+}

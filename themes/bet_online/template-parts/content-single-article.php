@@ -17,10 +17,11 @@
 <header class="entry-header">
   <h4 class="nav-hierarchy"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a> > 
   <span>
-  <?php  $taxonomy = 'category'; 
+	<?php  $taxonomy = 'category'; 
+	
   // ID Gets which assign post 
   $post_terms = wp_get_object_terms( $post->ID, $taxonomy, array( 'fields' => 'ids' ) );
-   
+
   // Links seprator.
   $separator_link = ' > ';
    
@@ -31,21 +32,23 @@
       $terms = wp_list_categories( array(
           'title_li' => '',
           'style'    => 'none',
-          'echo'     => false,
+					'echo'     => false,
+					'hide_empty' => false,
           'taxonomy' => $taxonomy,
           'include'  => $term_ids
       ) );
-   
+	 
       $terms = rtrim( trim( str_replace( '<br />',  $separator_link, $terms ) ), $separator_link );
    
       // show category post.
-      echo  $terms;
+			echo  $terms;
   }  ?>
-  		endif;
+			endif;
+			<!-- d($taxonomy); -->
 </span>
 
-      <!-- <span><?php get_category_parents( $cat, true, ' &raquo; ' ); ?></span>
-			<span><?php get_the_category('id'); ?></span> -->
+      <!-- <span><?php get_category_parents( $cat, true, ' &raquo; ' ); ?></span> -->
+			<!-- <span><?php get_the_category('id'); ?></span> -->
       <span> > <?php the_title('<span class="nav-current-article">', '</span>'); ?></span>
       
 </h4>

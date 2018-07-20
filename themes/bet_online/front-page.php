@@ -11,14 +11,14 @@ get_header(); ?>
 		<main id="main" class="site-main" role="main">
       <div class="front-page-wrapper">
 
-			<section id="hero-carousel" class="hero-carousel">
-				<ul id="hero-article" class="hero-article">
-					<?php get_template_part( 'template-parts/content', 'slick-hero' ); ?>
-
-				<ul id="slider-nav" class="slider-nav">
-					<?php get_template_part( 'template-parts/content', 'slick-nav' ); ?>
-
-			</section>
+			<!-- Slick Hero Carousel -->
+				<section id="hero-carousel" class="hero-carousel">
+					<ul id="hero-article" class="hero-article">
+						<?php get_template_part( 'template-parts/content', 'slick-hero' ); ?>
+					
+					<ul id="slider-nav" class="slider-nav">
+						<?php get_template_part( 'template-parts/content', 'slick-nav' ); ?>
+				</section>
 
         <section class="front-page__latest-articles x-container">
 					<div class="header">
@@ -35,22 +35,32 @@ get_header(); ?>
             <ul class="articles-container">
 
 						<?php
-              $args = array(
-								'post_type' => 'post', 'post__not_in' => array( 2, 3, 4, 5, 6, 15 ), 'posts_per_page' => 5, 'orderby' => 'date', 'orderby' => 'DEC' 
+              $args1 = array(
+								'post_type' => 'post', 
+								'posts_per_page' => 5,
+								'category__not_in' => array( 2, 3, 4, 5, 6 ), 
+								'orderby' => 'date', 
+								'orderby' => 'DEC' 
 							);
-              $arr_posts = new WP_Query( $args );
+              $arr1_posts = new WP_Query( $args1 );
 
-            if ( $arr_posts->have_posts() ) :
+							// kint debugger
+							// d($arr1_posts);
 
-              while ( $arr_posts->have_posts() ) :
-                $arr_posts->the_post();
+            if ( $arr1_posts->have_posts() ) :
+
+              while ( $arr1_posts->have_posts() ) :
+								$arr1_posts->the_post();
+								
+								
             ?>
                 
 								<?php get_template_part( 'template-parts/content', 'articles' ); ?>
 								
 							<?php endwhile; ?>
-
+							<?php wp_reset_postdata(); ?>
 						<?php endif; ?>
+						
 						</ul>	
 
           </section> <!-- End of LATEST ARTICLES -->
@@ -69,12 +79,25 @@ get_header(); ?>
 						</div>
 					</div>
           <ul class="articles-container">
-            <?php
+					
+						<?php
+							// $idObj = get_category_by_slug('sports');
               $args = array(
-                'post_type' => 'post',
+								'post_type' => 'post',
+								'posts_per_page' => 5,
                 'post_status' => 'publish',
-                'category_name' => 'sports',
-                'posts_per_page' => 5,
+								'category__not_in' => '2', 
+								'orderby' => 'date',
+								'orderby' => 'DEC',
+								'tax_query' => array(
+									array(
+											'taxonomy' => 'category',
+											'field' => 'term_id',
+											'terms' => array(2),
+											'include_children' => true,
+									),
+							)
+								// 'category__in' => array( '$idObj->term_id' ),
               );
               $arr_posts = new WP_Query( $args );
 
@@ -87,7 +110,8 @@ get_header(); ?>
             <?php get_template_part( 'template-parts/content', 'articles' ); ?>
 
             <?php endwhile; ?>
-          </ul>
+					</ul>
+						<?php wp_reset_postdata(); ?>
             <?php endif; ?>
         </section> <!-- End of CATEGORY SPORTS -->
 
@@ -110,7 +134,18 @@ get_header(); ?>
                 'post_type' => 'post',
                 'post_status' => 'publish',
                 'category_name' => 'casino',
-                'posts_per_page' => 5,
+								'posts_per_page' => 5,
+								'category__not_in' => '3', 
+								'orderby' => 'date',
+								'orderby' => 'DEC',
+								'tax_query' => array(
+									array(
+											'taxonomy' => 'category',
+											'field' => 'term_id',
+											'terms' => array(3),
+											'include_children' => true,
+									),
+							)
               );
               $arr_posts = new WP_Query( $args );
 
@@ -123,7 +158,8 @@ get_header(); ?>
             <?php get_template_part( 'template-parts/content', 'articles' ); ?>
 
             <?php endwhile; ?>
-          </ul>
+					</ul>
+					<?php wp_reset_postdata(); ?>
             <?php endif; ?>
         </section> <!-- End of CATEGORY CASINO -->
 
@@ -145,8 +181,18 @@ get_header(); ?>
               $args = array(
                 'post_type' => 'post',
                 'post_status' => 'publish',
-                'category_name' => 'horses',
-                'posts_per_page' => 5,
+								'posts_per_page' => 5,
+								'category__not_in' => '5', 
+								'orderby' => 'date',
+								'orderby' => 'DEC',
+								'tax_query' => array(
+									array(
+											'taxonomy' => 'category',
+											'field' => 'term_id',
+											'terms' => array(5),
+											'include_children' => true,
+									),
+							)
               );
               $arr_posts = new WP_Query( $args );
 
@@ -159,7 +205,8 @@ get_header(); ?>
             <?php get_template_part( 'template-parts/content', 'articles' ); ?>
 
             <?php endwhile; ?>
-            </ul>
+						</ul>
+						<?php wp_reset_postdata(); ?>
               <?php endif; ?>
         </section> <!-- End of CATEGORY HORSES -->
 

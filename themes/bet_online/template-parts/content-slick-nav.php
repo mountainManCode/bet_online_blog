@@ -8,7 +8,7 @@
 
 <?php 
   $args = array(
-    'posts_per_page' => 5,
+    'posts_per_page' => 4,
     'post__in'  => get_option( 'sticky_posts' ),
     'ignore_sticky_posts' => 1
   );
@@ -27,7 +27,7 @@
       )  ) ) :
     ?>
 
-      <li class="carousel-article">
+      <li id="carousel-article" class="carousel-article">
         <article id="post-<?php the_ID(); ?>" class="article-wrapper">
           <section id='article__meta' class='article__meta'>
             <div class="article__top-content">
@@ -39,29 +39,26 @@
     
             </div>
 
-              <a href="<?php echo get_permalink();?>"	class="article-link">
-                <div id='article__title' class='article__title'>
-                  <?php the_title();?>
-                </div>
-              </a>
+            <div id='article__title' class='article__title'>
+              <?php the_title();?>
+            </div>
 
             </section>
-            <!-- <div> -->
-              <?php if ( has_post_thumbnail() ) : ?>
-                <?php the_post_thumbnail( 'medium' ); ?>
-              <?php endif; ?>
-            <!-- </div> -->
+
+            <?php if ( has_post_thumbnail() ) : ?>
+              <?php the_post_thumbnail( 'medium' ); ?>
+            <?php endif; ?>
+
           </article>
       </li>
 
   <?php endif; ?>
 <?php endwhile; ?>
         </ul>
-
+        <?php wp_reset_postdata(); ?>
 		<?php else : ?>
 
 			<?php get_template_part( 'template-parts/content', 'none' ); ?>
-
     <?php endif; ?>
     <!-- </ul> -->
     <!-- </div> -->

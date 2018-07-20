@@ -8,7 +8,7 @@
 
 <?php 
   $args = array(
-    'posts_per_page' => 5,
+    'posts_per_page' => 4,
     'post__in'  => get_option( 'sticky_posts' ),
     'ignore_sticky_posts' => 1
   );
@@ -28,9 +28,9 @@
     ?>
 
       <li class="carousel-article">
-          <article id="post-<?php the_ID(); ?>" class="x-article-wrapper" style="background-image: url('<?php echo $article_hero[0]; ?>')">
+        <article id="post-<?php the_ID(); ?>" class="article__hero-wrapper" style="background-image: url('<?php echo $article_hero[0]; ?>')">
           
-            <section id='article__content' class='article__content'>
+          <section id='article__content' class='article__content'>
               <div class="article__top-content">
     
                 <object>
@@ -44,6 +44,9 @@
                 <div id='article__title' class='article__title'>
                   <?php the_title();?>
                 </div>
+                <div id='article__excerpt' class='article__excerpt'>
+                  <?php echo get_the_excerpt();?>
+                </div>
               </a>
 
             </section>
@@ -52,7 +55,7 @@
 
   <?php endif; ?>
 <?php endwhile; ?>
-
+<?php wp_reset_postdata(); ?>
 </ul>
 
 		<?php else : ?>
