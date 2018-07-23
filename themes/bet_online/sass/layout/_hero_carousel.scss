@@ -139,6 +139,9 @@
 
   // ARTICLES SLIDER NAVIGATION
   ul.slider-nav {
+    // display: none;
+
+    // @include desktop {
     width: 100%;
     max-width: 450px;
     height: 100%;
@@ -272,3 +275,4 @@
     }
   }
 }
+// }

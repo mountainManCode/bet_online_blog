@@ -17,7 +17,7 @@
 
 <!-- Custom Query Loop -->
 <?php if ( $carousel -> have_posts() ) : ?>
-      <?php while ( $carousel -> have_posts() ) : $carousel -> the_post(); ?>
+  <?php while ( $carousel -> have_posts() ) : $carousel -> the_post(); ?>
 
     <?php 
       if ( $article_hero = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'large',  array(
@@ -53,13 +53,13 @@
           </article>
       </li>
 
-  <?php endif; ?>
-<?php endwhile; ?>
-<?php wp_reset_postdata(); ?>
-</ul>
+    <?php endif; ?>
+  <?php endwhile; ?>
+  <?php wp_reset_postdata(); ?>
+  </ul>
 
 		<?php else : ?>
 
 			<?php get_template_part( 'template-parts/content', 'none' ); ?>
 
-    <?php endif; ?>
+<?php endif; ?>

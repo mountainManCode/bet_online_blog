@@ -7,19 +7,34 @@
 .post .entry-content-container {
   width: 100%;
   display: flex;
-  flex-flow: row nowrap;
+  flex-flow: column nowrap;
   justify-content: center;
-  padding: 20px 100px 10px 100px;
+  margin: 0 auto;
+  padding: 20px 15px 10px 15px;
   flex: 0 1 auto;
 
+  @include tablet {
+    flex-flow: row nowrap;
+    justify-content: center;
+    // padding: 20px 100px 10px 100px;
+    flex: 0 1 auto;
+  }
+  @include desktop {
+    max-width: 1200px;
+  }
+
   .entry-content__area {
+    width: 100%;
     background: #fff;
     margin: 0 0 2rem 0;
-    width: 66%;
     display: flex;
     flex-flow: column nowrap;
     flex: 0 1 auto;
     align-content: center;
+
+    @include tablet {
+      width: 66%;
+    }
   }
 }
 

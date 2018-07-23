@@ -20,7 +20,7 @@ get_header(); ?>
 						<?php get_template_part( 'template-parts/content', 'slick-nav' ); ?>
 				</section>
 
-        <section class="front-page__latest-articles x-container">
+        <section class="front-page__articles x-container">
 					<div class="header">
 						<div class="header__wrapper-outer">
 							<h2 class="header__tag">Latest Articles</h2>
@@ -38,19 +38,20 @@ get_header(); ?>
               $args1 = array(
 								'post_type' => 'post', 
 								'posts_per_page' => 5,
+								'post_status' => 'publish',
 								'category__not_in' => array( 2, 3, 4, 5, 6 ), 
 								'orderby' => 'date', 
 								'orderby' => 'DEC' 
 							);
-              $arr1_posts = new WP_Query( $args1 );
+              $latest_articles = new WP_Query( $args1 );
 
 							// kint debugger
-							// d($arr1_posts);
+							// d($latest_articles);
 
-            if ( $arr1_posts->have_posts() ) :
+            if ( $latest_articles->have_posts() ) :
 
-              while ( $arr1_posts->have_posts() ) :
-								$arr1_posts->the_post();
+              while ( $latest_articles->have_posts() ) :
+								$latest_articles->the_post();
 								
 								
             ?>
@@ -58,15 +59,14 @@ get_header(); ?>
 								<?php get_template_part( 'template-parts/content', 'articles' ); ?>
 								
 							<?php endwhile; ?>
-							<?php wp_reset_postdata(); ?>
-						<?php endif; ?>
-						
-						</ul>	
+							</ul>	
 
-          </section> <!-- End of LATEST ARTICLES -->
+						<?php wp_reset_postdata(); ?>
+					<?php endif; ?>
+        </section> <!-- End of LATEST ARTICLES -->
 
         <!-- CATEGORY SPORTS -->
-        <section class="front-page__latest-articles x-container">
+        <section class="front-page__articles x-container">
 					<div class='header'>
 						<div class="header__wrapper-outer">
 							<h2 class="header__tag">Sports</h2>
@@ -99,12 +99,12 @@ get_header(); ?>
 							)
 								// 'category__in' => array( '$idObj->term_id' ),
               );
-              $arr_posts = new WP_Query( $args );
+              $sports_posts = new WP_Query( $args );
 
-            if ( $arr_posts->have_posts() ) :
+            if ( $sports_posts->have_posts() ) :
 
-              while ( $arr_posts->have_posts() ) :
-                $arr_posts->the_post();
+              while ( $sports_posts->have_posts() ) :
+                $sports_posts->the_post();
             ?>
                   
             <?php get_template_part( 'template-parts/content', 'articles' ); ?>
@@ -116,7 +116,7 @@ get_header(); ?>
         </section> <!-- End of CATEGORY SPORTS -->
 
         <!-- CATEGORY CASINO -->
-        <section class="front-page__latest-articles x-container">
+        <section class="front-page__articles x-container">
 					<div class='header'>
 						<div class="header__wrapper-outer">
 							<h2 class="header__tag">Casino</h2>
@@ -147,12 +147,12 @@ get_header(); ?>
 									),
 							)
               );
-              $arr_posts = new WP_Query( $args );
+              $casino_posts = new WP_Query( $args );
 
-              if ( $arr_posts->have_posts() ) :
+              if ( $casino_posts->have_posts() ) :
 
-                while ( $arr_posts->have_posts() ) :
-                  $arr_posts->the_post();
+                while ( $casino_posts->have_posts() ) :
+                  $casino_posts->the_post();
             ?>
                 
             <?php get_template_part( 'template-parts/content', 'articles' ); ?>
@@ -160,11 +160,11 @@ get_header(); ?>
             <?php endwhile; ?>
 					</ul>
 					<?php wp_reset_postdata(); ?>
-            <?php endif; ?>
+          <?php endif; ?>
         </section> <!-- End of CATEGORY CASINO -->
 
         <!-- CATEGORY HORSES -->
-        <section class="front-page__latest-articles x-container">
+        <section class="front-page__articles x-container">
 					<div class="header">
 						<div class="header__wrapper-outer">
 							<h2 class="header__tag">Horses</h2>
@@ -194,12 +194,12 @@ get_header(); ?>
 									),
 							)
               );
-              $arr_posts = new WP_Query( $args );
+              $horses_posts = new WP_Query( $args );
 
-              if ( $arr_posts->have_posts() ) :
+              if ( $horses_posts->have_posts() ) :
 
-              while ( $arr_posts->have_posts() ) :
-                $arr_posts->the_post();
+              while ( $horses_posts->have_posts() ) :
+                $horses_posts->the_post();
             ?>
                 
             <?php get_template_part( 'template-parts/content', 'articles' ); ?>

@@ -1,52 +1,79 @@
 (function($) {
   $('#hero-article').slick({
+    // respondTo: 'window',
+    // mobileFirst: true,
     arrows: false,
     dots: true,
-    // asNavFor: '.slider-nav',
+    lazyLoad: 'ondemand',
+    pauseOnDotsHover: true,
     slidesToShow: 1,
     slidesToScroll: 1,
     speed: 500,
     fade: true,
-    cssEase: 'linear'
-  });
-  // have both connect to the same class, and css the info
-  $('#slider-nav').slick({
-    arrows: false,
-    asNavFor: '#hero-article',
-    // autoplay: true,
-    // autoplaySpeed: 3000,
+    cssEase: 'linear',
     focusOnSelect: true,
+    focusOnChange: true,
+    infinite: true,
+    swipe: true
+
+    // responsive: [
+    //   {
+    //     breakpoint: 991,
+    //     settings: {
+    //       swipe: false
+    //     }
+    //   }
+    //   //   },
+    //   //   {
+    //   //     breakpoint: 300,
+    //   //     settings: 'unslick' // destroys slick
+    //   //   }
+    // ]
+  });
+
+  $('#slider-nav').slick({
+    respondTo: 'window',
+    accessibility: true,
+    // mobileFirst: true,
+    arrows: false,
+    // slidesToShow: 1,
+    // slidesToScroll: 1,
+
+    asNavFor: '#hero-article',
+    focusOnSelect: true,
+    focusOnChange: true,
     infinite: true,
     lazyLoad: 'ondemand',
-    pauseOnDotsHover: true,
     slidesToShow: 4,
     slidesToScroll: 4,
     swipe: false,
     vertical: true
-    // appendDots: $('.append-dots'),
-    // dots: true,
-    // dotsClass: 'custom-dots'
 
-    // the magic
     // responsive: [
+    // {
+    // breakpoint: 991,
+    // settings:
+    // {
+    //   asNavFor: '#hero-article',
+    //   focusOnSelect: true,
+    //   focusOnChange: true,
+    //   infinite: true,
+    //   lazyLoad: 'ondemand',
+    //   // pauseOnDotsHover: true,
+    //   slidesToShow: 4,
+    //   slidesToScroll: 4,
+    //   swipe: false,
+    //   vertical: true
+    // }
+    // }
     //   {
-    //     breakpoint: 1024,
-    //     settings: {
-    //       slidesToShow: 3,
-    //       infinite: true
-    //     }
-    //   },
-    //   {
-    //     breakpoint: 600,
-    //     settings: {
-    //       slidesToShow: 2,
-    //       dots: true
-    //     }
-    //   },
-    //   {
-    //     breakpoint: 300,
-    //     settings: 'unslick' // destroys slick
+    //     breakpoint: 768,
+    //     settings: 'unslick'
     //   }
     // ]
   });
+
+  // $(window).on('resize orientationchange', function() {
+  //   $('.#slider-nav').resize; //slick('resize');
+  // });
 })(jQuery);

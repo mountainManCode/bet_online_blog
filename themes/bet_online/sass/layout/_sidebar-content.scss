@@ -1,6 +1,8 @@
 .site-content .post aside.widget-area {
-  position: sticky;
-  top: 50px;
+  @include tablet {
+    position: sticky;
+    top: 50px;
+  }
 }
 
 aside.widget-area {
@@ -10,10 +12,14 @@ aside.widget-area {
   flex-flow: column nowrap;
   justify-content: flex-start;
   align-content: center;
-  width: 34%;
-  padding-left: 50px;
-  margin: 0;
   @include header-styles;
+
+  @include tablet {
+    width: 34%;
+    padding-left: 50px;
+    margin: 0;
+    justify-content: center;
+  }
 
   .widget-title {
     display: none;
