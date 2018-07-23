@@ -4,8 +4,9 @@
   <?php
 
     $getcategories = get_the_category();
-    foreach( $getcategories as $category ){
-    $sub_category = $category;}
+    foreach( $getcategories as $category ) {
+      $sub_category = $category;
+    }
 
     if( isset( $sub_category ) ) :
     
@@ -35,8 +36,7 @@
   
     <?php get_template_part( 'template-parts/content', 'none' ); ?>
   <?php endif; ?>
+  <?php wp_reset_query(); ?>
 <?php endif; ?>
 
-
-
-  </section>
+</section>

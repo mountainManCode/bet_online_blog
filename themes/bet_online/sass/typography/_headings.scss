@@ -8,19 +8,34 @@ h6 {
 }
 
 h1 {
+  color: $color__text-headline;
   font-family: $font__main;
-  font-size: $font-size__text-headline;
+  font-size: $font-size__header-h1;
+  font-weight: bold;
+  font-style: italic;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+}
+
+h2 {
+  color: $color__text-headline;
+  font-family: $font__main;
+  font-size: $font-size__header-h2;
   font-weight: bold;
   font-style: normal;
   font-stretch: normal;
   line-height: normal;
   letter-spacing: normal;
-  color: $color__text-headline;
 }
 
-h1 {
-  font-size: 15px;
-  font-family: $font__main;
-  font-weight: bold;
+h3 {
   color: $color__text-headline;
+  font-family: $font__main;
+  font-size: $font-size__main;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
 }

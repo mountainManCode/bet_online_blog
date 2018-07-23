@@ -99,6 +99,23 @@
 			</div><!-- .entry-content -->
 
 			<footer class="entry-footer">
+				<div class="article__tags">
+					<span class="article__tags-title">Tags: &nbsp </span>
+					<span class="article__tag-names">
+						<?php
+							$posttags = get_the_tags();
+							if ($posttags) {
+								foreach($posttags as $tag) {
+									?> 
+									<a href="<?php echo get_tag_link($tag->term_id); ?>"> 
+									<?php echo '#' . $tag->name . ' &nbsp  '; ?>
+								</a> 
+								<?php 
+								}
+							}
+						?>
+					</span>
+				</div>
 				<span class="article__author-avatar"><?php echo get_avatar( get_the_author_meta('user_email'), $size = '50'); ?></span>
 				<span> By </span>
 				<span class="article__author-name"><?php echo get_the_author_meta('display_name') ?></span>

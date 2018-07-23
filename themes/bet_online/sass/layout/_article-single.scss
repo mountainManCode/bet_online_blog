@@ -130,5 +130,31 @@
   .entry-footer {
     margin: 10px 0;
     @include author-meta-styles-big;
+
+    // TAGS
+    .article__tags {
+      padding: 25px 0;
+
+      .article__tag-title {
+        color: #4b4b4b;
+        font-family: $font__main;
+        font-size: $font-size__article-tn-category;
+        font-weight: bold;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: 1.14;
+        letter-spacing: normal;
+      }
+      .article__tag-names a {
+        color: $color__text-date;
+        font-family: $font__main;
+        font-size: $font-size__article-tn-category;
+        font-weight: normal;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: 1.14;
+        letter-spacing: normal;
+      }
+    }
   }
 }

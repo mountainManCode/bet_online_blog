@@ -152,3 +152,19 @@ if( $related->have_posts() ) {
         </nav>
         <div class="mobile-nav-content nav--home">
             <div class="container-fluid">
+
+
+// Get Tags
+
+					<?php
+							$posttags = get_the_tags();
+							if ($posttags) {
+								foreach($posttags as $tag) {
+									?> 
+									<a href="<?php echo get_tag_link($tag_id); ?>"> 
+									<?php echo '#' . $tag->name . '&nbsp  '; ?>
+								</a> 
+								<?php 
+								}
+							}
+						?>
