@@ -19,7 +19,7 @@
     <a href="<?php echo get_permalink();?>"	class="article-link">
       <article id="post-<?php the_ID(); ?>" class="article-wrapper" style="background-image: url('<?php echo $article_hero[0]; ?>')">
 
-        <section id='article__content' class='article__content'>
+        <section id='article__meta' class='article__meta'>
           <div class="article__top-content">
 
             <object>

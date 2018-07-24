@@ -76,4 +76,46 @@
   // $(window).on('resize orientationchange', function() {
   //   $('.#slider-nav').resize; //slick('resize');
   // });
+
+  $('#events-wrapper').slick({
+    arrows: true,
+    // centerPadding: '40px',
+    // centerMode: true,
+    infinite: false,
+    mobileFirst: true,
+    lazyLoad: 'ondemand',
+    respondTo: 'window',
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    swipe: true,
+
+    responsive: [
+      {
+        breakpoint: 499,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2
+          // centerMode: true
+        }
+      },
+      {
+        breakpoint: 767,
+        settings: {
+          // centerPadding: '60px',
+          // centerMode: true,
+          slidesToShow: 3,
+          slidesToScroll: 3
+        }
+      },
+      {
+        breakpoint: 990,
+        settings: {
+          // centerPadding: '60px',
+          // centerMode: true,
+          slidesToShow: 4,
+          slidesToScroll: 4
+        }
+      }
+    ]
+  });
 })(jQuery);

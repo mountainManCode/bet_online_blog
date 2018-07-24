@@ -52,7 +52,7 @@
 
     @include tablet {
       margin: 0 auto;
-      padding: 4rem;
+      padding-bottom: 4rem;
     }
     @include desktop {
       max-width: 1200px;
@@ -69,7 +69,6 @@
       grid-template-columns: 1fr;
       grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
       grid-row-gap: 20px;
-
       list-style: none;
 
       @include small-tablet {
@@ -308,8 +307,6 @@
           font-size: $font-size__article-tn-title;
           color: #e7e7e7;
           font-weight: 600;
-          // background-color: #000;
-          // opacity: 0.1;
           &:hover,
           &:focus,
           &:active {

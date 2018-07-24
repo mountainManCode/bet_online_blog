@@ -4,6 +4,7 @@
 }
 
 // Divide between content and sidebar
+.home .entry-content,
 .post .entry-content-container {
   width: 100%;
   display: flex;
@@ -12,6 +13,7 @@
   margin: 0 auto;
   padding: 20px 15px 10px 15px;
   flex: 0 1 auto;
+  background-color: $color__background-body;
 
   @include tablet {
     flex-flow: row nowrap;
@@ -25,8 +27,8 @@
 
   .entry-content__area {
     width: 100%;
-    background: #fff;
     margin: 0 0 2rem 0;
+    background: #fff;
     display: flex;
     flex-flow: column nowrap;
     flex: 0 1 auto;
@@ -34,6 +36,7 @@
 
     @include tablet {
       width: 66%;
+      padding-right: 20px;
     }
   }
 }
@@ -73,52 +76,6 @@
       letter-spacing: normal;
       color: $color__text-main-title;
       text-transform: capitalize;
-    }
-  }
-
-  // BLOCK QUOTES
-  blockquote {
-    // background: url('./assets/img/new/blockquote@3x.png') center / cover
-    //   no-repeat;
-    position: relative;
-    align-self: center;
-    align-content: center;
-    width: 100%;
-    max-width: 85%;
-    height: 100%;
-    min-height: 100px;
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: center;
-    align-content: center;
-    margin: 2rem 0;
-    padding: 2rem;
-    border-radius: 8px;
-    background-color: #ffffff;
-    box-shadow: 2px 2px 13px 0 rgba(0, 0, 0, 0.2);
-
-    p {
-      // position: absolute;
-      margin: 20px;
-      &:last-child {
-        margin: 0;
-      }
-    }
-
-    &:before {
-      content: url(./assets/img/new/blockquote-top.svg);
-      position: absolute;
-      top: -15px;
-      left: -30px;
-      z-index: 5;
-    }
-    &:after {
-      content: url(./assets/img/new/blockquote-top.svg);
-      position: absolute;
-      transform: rotate(180deg);
-      bottom: -15px;
-      right: -30px;
-      z-index: 5;
     }
   }
 

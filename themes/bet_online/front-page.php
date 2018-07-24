@@ -65,32 +65,27 @@ get_header(); ?>
 					<?php endif; ?>
 				</section> <!-- End of LATEST ARTICLES -->
 				
-				<section class="front-page-videos">
-				<ul class="videos-container">
-				<?php
-					$args = array( 'post_type'=>'videos_post_type', 'posts_per_page'=> 8);
-					$posts = get_posts( $args ); // returns an array of posts
+				<!-- VIDEOS -->
+				<section class="front-page__videos">
+					<?php get_template_part( 'template-parts/content', 'videos' ); ?>
+				</section>
 
-				?>
-
-
-					<?php foreach ( $posts as $post ) : setup_postdata( $post ); 
-										d($post); ?>
-
-					<!-- <?php 
-						if ( $videos_hero = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'medium-large' ) ) : 
-					?> -->
-
-					<li class="adventure-hero">
-						<h2>class="adventure-title">
-						<?php the_title();?></a></h2>
-						<div><?php echo the_content(); ?></div>
-					</li>
-
-					<?php endif; ?>
-					<?php endforeach; wp_reset_postdata(); ?>
-				</ul>
-
+				<!-- UPCOMING EVENTS -->
+				<section class="front-page__events">
+					<div id="events-container" class="events-container">
+						<div class="header">
+							<div class="header__wrapper-outer">
+								<h2 class="header__tag">Upcoming Events</h2>
+								<div class="header__wrapper-inner">
+									<img class="svg" src="<?php echo get_template_directory_uri() . '/assets/img/new/icon-tag-right.svg' ?>">
+								<div class="header__icon">
+									<img class="svg" src="<?php echo get_template_directory_uri() . '/assets/img/new/sports.svg' ?>" />
+								</div>
+							</div>
+						</div>
+					</div>
+					<?php get_template_part( 'template-parts/content', 'events' ); ?>
+					</div>
 				</section>
 
         <!-- CATEGORY SPORTS -->
@@ -137,10 +132,10 @@ get_header(); ?>
                   
             <?php get_template_part( 'template-parts/content', 'articles' ); ?>
 
-            <?php endwhile; ?>
-					</ul>
+						<?php endwhile; ?>
 						<?php wp_reset_postdata(); ?>
-            <?php endif; ?>
+						<?php endif; ?>
+					</ul>
         </section> <!-- End of CATEGORY SPORTS -->
 
         <!-- CATEGORY CASINO -->
