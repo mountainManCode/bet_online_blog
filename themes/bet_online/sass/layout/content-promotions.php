@@ -1,4 +1,4 @@
-<?php
+<!-- <?php
 /**
  * Template part for displaying Blog Promotions.
  *
@@ -123,4 +123,4 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> -->

@@ -48,6 +48,12 @@
     bottom: 0;
   }
 }
+
+@mixin category {
+  padding-right: 5px;
+  font-size: $font-size__article-tn-category;
+  color: $color__text-cat;
+}
 @mixin header-styles {
   .header {
     height: 50px;

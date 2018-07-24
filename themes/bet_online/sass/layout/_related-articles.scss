@@ -1,0 +1,110 @@
+section.related-articles {
+  height: auto;
+  width: 100%;
+  margin: 0;
+  padding: 60px 15px 10px 15px;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  @include header-styles;
+
+  @include tablet {
+    margin: 0 auto;
+    padding-bottom: 6rem;
+  }
+  @include desktop {
+    max-width: 1200px;
+  }
+
+  h2.articles__header {
+    color: $color__text-main-title;
+    font-family: $font__main;
+    font-size: 33px;
+    font-weight: 600;
+    line-height: 1.15;
+    letter-spacing: 0.6px;
+    text-align: center;
+  }
+
+  ul.articles-container {
+    height: 100%;
+    max-height: 100%;
+    min-height: 100%;
+    width: 100%;
+    max-width: 100%;
+    margin: 1rem 0;
+    padding: 0;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+
+    @include tablet {
+      flex-flow: row nowrap;
+      justify-content: space-around;
+      align-content: center;
+    }
+    @include desktop {
+      justify-content: space-between;
+    }
+  }
+  li.article-list {
+    height: 100%;
+    max-height: 400px;
+    width: 100%;
+    max-width: 100%;
+
+    @include tablet {
+      max-width: 30%;
+      max-height: 250px;
+    }
+
+    div.article__image {
+      min-height: 230px;
+      min-width: 100%;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      @include dark-overlay;
+
+      @include tablet {
+        min-height: 200px;
+      }
+      @include desktop {
+        min-height: 230px;
+      }
+    }
+    .article__image:after {
+      background: rgba(0, 0, 0, 0.3);
+    }
+    .article__image:after {
+      background: rgba(0, 0, 0, 0.75);
+      color: red;
+    }
+
+    .article__meta {
+      height: 100%;
+      padding: 15px 0;
+    }
+
+    .article__meta-category > a {
+      @include styles-category;
+    }
+    .article__meta-date {
+      @include styles-date;
+    }
+
+    .article__meta-title {
+      height: 100%;
+      width: 100%;
+      margin: 0;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      font-size: $font-size__header-h2;
+      font-weight: 600;
+      line-height: 1.3;
+    }
+  }
+}

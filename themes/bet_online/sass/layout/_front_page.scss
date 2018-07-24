@@ -52,6 +52,7 @@
 
     @include tablet {
       margin: 0 auto;
+      padding: 4rem;
     }
     @include desktop {
       max-width: 1200px;
@@ -96,7 +97,6 @@
     }
     li.article-list {
       width: 100%;
-      max-width: 800px;
       height: 20vh;
       max-height: 600px;
 
@@ -285,7 +285,7 @@
       //   color: #ee3536;
       //   text-decoration: none;
       // }
-      .article__content {
+      .article__meta {
         padding: 10px;
         font-family: $font__main;
         line-height: $font__line-height-body;
@@ -297,15 +297,12 @@
       //     text-decoration: none;
       //   }
       // }
-      .article__content {
+      .article__meta {
         #article__category > a {
-          padding-right: 5px;
-          font-size: $font-size__article-tn-category;
-          color: $color__text-cat;
+          @include styles-category;
         }
         .article__date {
-          font-size: $font-size__article-tn-date;
-          color: $color__text-date;
+          @include styles-date;
         }
         .article__title {
           font-size: $font-size__article-tn-title;

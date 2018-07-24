@@ -30,7 +30,7 @@ get_header();
 		<?php get_template_part('template-parts/content', 'promotions'); ?>
 	</section>
 
-	<section class='related-articles'>
+	<section class='related-articles x-container'>
 		<?php get_template_part('template-parts/content', 'articles-related'); ?>
 	</section>
 
