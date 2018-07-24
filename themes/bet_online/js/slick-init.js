@@ -88,6 +88,10 @@
     slidesToShow: 1,
     slidesToScroll: 1,
     swipe: true,
+    // prevArrow:
+    //   '<button type="button" class="slick-next"><img class="svg" src="./assets/img/new/arrow.svg" /></button>',
+    // nextArrow:
+    //   '<button type="button" class="slick-next"><img class="svg" src="./assets/img/new/arrow.svg" /></button>',
 
     responsive: [
       {

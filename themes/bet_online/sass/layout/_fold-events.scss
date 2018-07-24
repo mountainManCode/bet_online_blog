@@ -7,12 +7,6 @@
   display: flex;
   background-color: $color__background-events;
 }
-// flex-flow: column nowrap;
-// justify-content: center;
-
-// @include desktop {
-//   max-width: 1200px;
-// }
 
 div#events-container {
   height: 100%;
@@ -46,6 +40,18 @@ ul.events-wrapper {
   justify-content: space-around;
   align-items: center;
   list-style: none;
+
+  button.slick-arrow {
+    fill: r#ee3536 !important;
+  }
+
+  button.slick-prev:before {
+    content: url('./assets/img/new/arrow-prev.svg');
+  }
+
+  button.slick-next:before {
+    content: url('./assets/img/new/arrow-next.svg');
+  }
 
   .slick-list,
   .slick-track {
