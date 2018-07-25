@@ -28,7 +28,7 @@
     ?>
 
       <li id="carousel-article" class="carousel-article">
-        <article id="post-<?php the_ID(); ?>" class="article-wrapper">
+        <article id="article-wrapper" class="article-wrapper">
           <section id='article__meta' class='article__meta'>
             <div class="article__top-content">
     

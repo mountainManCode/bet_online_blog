@@ -1,0 +1,108 @@
+section.signUp {
+  min-height: 100%;
+  min-width: 100%;
+  padding: 120px 10px;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  background-image: url('./assets/img/new/football-stadium.jpg');
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: rgba(0, 0, 0, 0.5);
+  background-blend-mode: multiply;
+
+  h1.signUp__title {
+    text-align: center;
+    color: $color__text-style-3;
+
+    span.title-highlight {
+      color: $color__text-cat;
+    }
+  }
+  p.signUp__description {
+    text-align: center;
+    color: $color__text-style-3;
+    font-size: $font-size__main;
+  }
+
+  // EMAIL FORM
+  form.wpcf7-form {
+    width: 100%;
+    padding: 0 5px;
+    align-self: center;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+
+    @include tablet {
+      flex-flow: row wrap;
+      justify-content: center;
+    }
+    span.email {
+      width: 100%;
+      color: #fff;
+      flex-basis: 90%;
+
+      span.wpcf7-not-valid-tip {
+        color: $color__text-style-2;
+        font-size: $font-size__main;
+      }
+      @include tablet {
+        flex: 2 0 55%;
+      }
+    }
+    span input[type='email'] {
+      align-self: center;
+      width: 100%;
+      max-width: 100%;
+      // padding: 0 10px;
+      // margin: 0 10px;
+      background: transparent;
+      border: none;
+      border-bottom: solid 1px $color__border-form;
+      color: $color__text-style-3;
+      font-size: $font-size__main;
+
+      &::placeholder {
+        color: $color__text-style-3;
+        font-size: $font-size__main;
+      }
+    }
+    // Form SUBMIT Button
+    p input[type='submit'] {
+      padding: 10px;
+      border-color: $color__border-button-event;
+      border-radius: 4.2px;
+      background-color: $color__background-style-1;
+      color: $color__text-style-3;
+      font-size: $font-size__main;
+      font-weight: 600;
+
+      &:focus {
+        background-color: $color__text-style-2;
+      }
+
+      @include tablet {
+        margin-left: 20px;
+        flex: 2 0 40%;
+      }
+    }
+    div.wpcf7-response-output {
+      margin: 15px 0 0 0;
+      padding: 0;
+      border: none;
+      color: $color__text-style-3;
+      font-size: $font-size__header-h2;
+      text-align: center;
+      @include tablet {
+        flex-basis: 60%;
+      }
+    }
+    div.wpcf7-validation-errors {
+      display: none;
+      border: none;
+    }
+  }
+}

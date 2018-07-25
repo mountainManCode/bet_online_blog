@@ -15,6 +15,10 @@
 
 		<!-- FOOTER SECTION -->
 		<footer id="colophon" class="layout-footer">
+				<!-- SIGN UP FORM -->
+				<section id="signUp" class="signUp">
+					<?php get_template_part('template-parts/content', 'fold-signUp'); ?>
+				</section>
 		 <div class="container footer-seo">
 				 <!-- FOOTER USED ON ALL PAGES EXCEPT FOR HOME PAGE -->
 				 <div class="row">

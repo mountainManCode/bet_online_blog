@@ -1,7 +1,7 @@
 <ul id="events-wrapper" class="events-wrapper">
   <?php
     $args = array( 'post_type'=>'events_post_type', 'post_status'=>'future', 'orderBy'=>'post_date', 'order'=>'ASC', 'posts_per_page'=> 8);
-    // $posts = get_posts( $args ); // returns an array of posts
+    
     $event_posts = new WP_Query( $args );
     
     if ( $event_posts->have_posts() ) : 
@@ -17,7 +17,6 @@
       )  ) ) :
     ?>
   <li class="event-list">
-    <!-- <a href="<?php echo get_permalink();?>"	class="article-link"> -->
       <div id="event" class="event" style="background-image: url('<?php echo $event_hero[0]; ?>')">
 
         <section id='event__meta' class='event__meta'>
@@ -43,11 +42,8 @@
 
           <a href="<?php echo get_permalink();?>"><button class="event__button">View Event</button></a>
           
-          
-
         </section>
       </div>
-    <!-- </a> -->
     </li>
   <?php endif; ?>
   <?php endwhile; ?>

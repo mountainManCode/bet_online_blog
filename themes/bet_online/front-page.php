@@ -20,6 +20,7 @@ get_header(); ?>
 						<?php get_template_part( 'template-parts/content', 'slick-nav' ); ?>
 				</section>
 
+				<!-- LATEST ARTICLES -->
         <section class="front-page__articles x-container">
 					<div class="header">
 						<div class="header__wrapper-outer">
@@ -35,19 +36,21 @@ get_header(); ?>
 						<?php wp_reset_postdata(); ?>
 						<?php
               $args_latest = array(
+								'category__not_in' => array( 2, 3, 4, 5, 6 ),
+								'ignore_sticky_posts' => true, 
 								'post_type' => 'post', 
 								'posts_per_page' => 5,
 								'post_status' => 'publish',
-								'category__not_in' => array( 2, 3, 4, 5, 6 ), 
 								'orderby' => 'date', 
-								'orderby' => 'DEC' 
+								'order' => 'DEC',
+								'nopaging' => false,
 							);
-							?>
+						?>
 							<?php
               $latest_articles = new WP_Query( $args_latest );
 
 							// kint debugger
-							d($latest_articles);
+							// d($latest_articles);
 
             if ( $latest_articles->have_posts() ) :
 ?>
@@ -134,8 +137,9 @@ get_header(); ?>
 
 						<?php endwhile; ?>
 						<?php wp_reset_postdata(); ?>
+						</ul>
 						<?php endif; ?>
-					</ul>
+
         </section> <!-- End of CATEGORY SPORTS -->
 
         <!-- CATEGORY CASINO -->
@@ -180,9 +184,9 @@ get_header(); ?>
                 
             <?php get_template_part( 'template-parts/content', 'articles' ); ?>
 
-            <?php endwhile; ?>
+						<?php endwhile; ?>
+						<?php wp_reset_postdata(); ?>
 					</ul>
-					<?php wp_reset_postdata(); ?>
           <?php endif; ?>
         </section> <!-- End of CATEGORY CASINO -->
 
@@ -227,9 +231,9 @@ get_header(); ?>
                 
             <?php get_template_part( 'template-parts/content', 'articles' ); ?>
 
-            <?php endwhile; ?>
-						</ul>
+						<?php endwhile; ?>
 						<?php wp_reset_postdata(); ?>
+						</ul>
               <?php endif; ?>
         </section> <!-- End of CATEGORY HORSES -->
 
@@ -243,7 +247,7 @@ get_header(); ?>
 					<div class="entry-content__area"><?php the_content(); ?></div>
 						<?php get_sidebar(); ?>
 				</section><!-- .entry-content -->
-        
+			
       </div> <!-- front-page-wrapper -->
     </main>
   </div>

@@ -28,7 +28,7 @@
     ?>
 
       <li class="carousel-article">
-        <article id="post-<?php the_ID(); ?>" class="article__hero-wrapper" style="background-image: url('<?php echo $article_hero[0]; ?>')">
+        <article id="article__hero-wrapper" class="article__hero-wrapper" style="background-image: url('<?php echo $article_hero[0]; ?>')">
           
           <section id='article__content' class='article__content'>
               <div class="article__top-content">
