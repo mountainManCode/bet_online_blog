@@ -1,10 +1,18 @@
 .site-content {
   min-height: 100%;
-  padding: 0;
+  padding-top: 7vh;
 
   .content-area {
-    padding: 135px 0 2rem 0;
+    padding: 0 0 2rem 0;
     min-height: 100%;
+
+    @include tablet {
+      padding: 71px 0 2rem 0;
+    }
+
+    // @include desktop {
+    //   padding: px 0 2rem 0;
+    // }
 
     .site-main {
       min-height: 100%;

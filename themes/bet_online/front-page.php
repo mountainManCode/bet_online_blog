@@ -32,10 +32,9 @@ get_header(); ?>
 							</div>
 						</div>
 					</div>
-            <ul class="articles-container">
-
+						<?php wp_reset_postdata(); ?>
 						<?php
-              $args1 = array(
+              $args_latest = array(
 								'post_type' => 'post', 
 								'posts_per_page' => 5,
 								'post_status' => 'publish',
@@ -43,22 +42,23 @@ get_header(); ?>
 								'orderby' => 'date', 
 								'orderby' => 'DEC' 
 							);
-              $latest_articles = new WP_Query( $args1 );
+							?>
+							<?php
+              $latest_articles = new WP_Query( $args_latest );
 
 							// kint debugger
-							// d($latest_articles);
+							d($latest_articles);
 
             if ( $latest_articles->have_posts() ) :
-
+?>
+            <ul class="articles-container">
+<?php
               while ( $latest_articles->have_posts() ) :
-								$latest_articles->the_post();
+								$latest_articles->the_post();	
+            ?>            
+							<?php get_template_part( 'template-parts/content', 'articles' ); ?>
 								
-								
-            ?>
-                
-								<?php get_template_part( 'template-parts/content', 'articles' ); ?>
-								
-							<?php endwhile; ?>
+						<?php endwhile; ?>
 							</ul>	
 
 						<?php wp_reset_postdata(); ?>

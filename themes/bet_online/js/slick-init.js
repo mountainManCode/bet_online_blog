@@ -79,19 +79,13 @@
 
   $('#events-wrapper').slick({
     arrows: true,
-    // centerPadding: '40px',
-    // centerMode: true,
-    infinite: false,
+    focusOnSelect: false,
     mobileFirst: true,
     lazyLoad: 'ondemand',
     respondTo: 'window',
     slidesToShow: 1,
     slidesToScroll: 1,
     swipe: true,
-    // prevArrow:
-    //   '<button type="button" class="slick-next"><img class="svg" src="./assets/img/new/arrow.svg" /></button>',
-    // nextArrow:
-    //   '<button type="button" class="slick-next"><img class="svg" src="./assets/img/new/arrow.svg" /></button>',
 
     responsive: [
       {
@@ -99,14 +93,11 @@
         settings: {
           slidesToShow: 2,
           slidesToScroll: 2
-          // centerMode: true
         }
       },
       {
         breakpoint: 767,
         settings: {
-          // centerPadding: '60px',
-          // centerMode: true,
           slidesToShow: 3,
           slidesToScroll: 3
         }
@@ -114,8 +105,6 @@
       {
         breakpoint: 990,
         settings: {
-          // centerPadding: '60px',
-          // centerMode: true,
           slidesToShow: 4,
           slidesToScroll: 4
         }

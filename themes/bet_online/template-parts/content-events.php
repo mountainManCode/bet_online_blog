@@ -22,9 +22,28 @@
 
         <section id='event__meta' class='event__meta'>
           
-          <!-- <div id='event__title' class='event__title'>
+          <div id='event__title' class='event__title'>
             <?php the_title();?>
-          </div> -->
+          </div>
+          
+          <div class="event__date">
+            <div class="event__date-main">
+              <?php echo get_the_time('j') ?>
+            </div>
+        
+            <div class="event__date-secondary">
+              <div>
+                <span class="event__date-time"><?php echo get_the_time('l, g:i a') ?></span>
+              </div>
+              <div>
+                <span class="event__date-month-year"><?php echo get_the_time('F / Y') ?></span>
+              </div>
+            </div>
+          </div>
+
+          <a href="<?php echo get_permalink();?>"><button class="event__button">View Event</button></a>
+          
+          
 
         </section>
       </div>
