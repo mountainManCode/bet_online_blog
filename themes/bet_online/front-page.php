@@ -82,7 +82,19 @@ get_header(); ?>
 								</div>
 							</div>
 						</div>
-						<?php get_template_part( 'template-parts/content', 'fold-videos' ); ?>
+							<ul id="videos-list" class="videos-list">
+								<?php
+									$args = array( 'post_type'=>'videos_post_type', 'posts_per_page'=> 8);
+									
+									$posts = get_posts( $args );
+								?>
+
+								<?php foreach ( $posts as $post ) : setup_postdata( $post ); ?>
+
+							<?php get_template_part( 'template-parts/content', 'fold-videos' ); ?>
+
+								<?php endforeach; wp_reset_postdata(); ?>
+							</ul>		
 					</div>
 				</section>
 
@@ -99,8 +111,23 @@ get_header(); ?>
 								</div>
 							</div>
 						</div>
-					</div>
-					<?php get_template_part( 'template-parts/content', 'events' ); ?>
+						</div>
+						<ul id="events-wrapper" class="events-wrapper">
+							<?php
+								$args = array( 'post_type'=>'events_post_type', 'post_status'=>'future', 'orderBy'=>'post_date', 'order'=>'ASC', 'posts_per_page'=> 8);
+								
+								$event_posts = new WP_Query( $args );
+								
+								if ( $event_posts->have_posts() ) : 
+									while ( $event_posts->have_posts() ) : 
+									$event_posts->the_post();
+							?>
+
+							<?php get_template_part( 'template-parts/content', 'events' ); ?>
+									<?php endwhile; ?>
+								<?php endif; ?>
+							<?php wp_reset_postdata(); ?>
+						</ul>
 					</div>
 				</section>
 
