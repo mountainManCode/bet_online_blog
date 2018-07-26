@@ -77,9 +77,48 @@
   //   $('.#slider-nav').resize; //slick('resize');
   // });
 
+  // CAROUSEL FOR EVENTS FOLD
   $('#events-wrapper').slick({
     arrows: true,
     focusOnSelect: false,
+    infinite: false,
+    mobileFirst: true,
+    lazyLoad: 'ondemand',
+    respondTo: 'window',
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    swipe: true,
+
+    responsive: [
+      {
+        breakpoint: 499,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2
+        }
+      },
+      {
+        breakpoint: 767,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3
+        }
+      },
+      {
+        breakpoint: 990,
+        settings: {
+          slidesToShow: 4,
+          slidesToScroll: 4
+        }
+      }
+    ]
+  });
+
+  // CAROUSEL FOR VIDEOS FOLD
+  $('#videos-list').slick({
+    arrows: true,
+    focusOnSelect: false,
+    infinite: false,
     mobileFirst: true,
     lazyLoad: 'ondemand',
     respondTo: 'window',

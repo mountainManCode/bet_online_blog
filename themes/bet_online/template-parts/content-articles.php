@@ -8,7 +8,7 @@
 ?>
 
 <?php 
-  if ( $article_hero = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'medium',  array(
+  if ( $article_hero = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'medium-large',  array(
     'alt' => the_title_attribute( array(
       'echo' => false,
     ) ),
@@ -35,9 +35,9 @@ echo $parent->slug; ?> -->
 
           </div>
     
-          <div id='article__title' class='article__title'>
+          <h2 id='article__title' class='article__title'>
             <?php the_title();?>
-          </div>
+          </h2>
 
         </section>
       </article>

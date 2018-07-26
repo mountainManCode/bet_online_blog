@@ -54,7 +54,7 @@ get_header(); ?>
 
             if ( $latest_articles->have_posts() ) :
 ?>
-            <ul class="articles-container">
+            <ul class="articles-container articles-container-5">
 <?php
               while ( $latest_articles->have_posts() ) :
 								$latest_articles->the_post();	
@@ -70,7 +70,20 @@ get_header(); ?>
 				
 				<!-- VIDEOS -->
 				<section class="front-page__videos">
-					<?php get_template_part( 'template-parts/content', 'videos' ); ?>
+					<div id="videos-container" class="videos-container">
+						<div class="header">
+							<div class="header__wrapper-outer">
+								<h2 class="header__tag">Videos</h2>
+								<div class="header__wrapper-inner">
+									<img class="svg" src="<?php echo get_template_directory_uri() . '/assets/img/new/icon-tag-right.svg' ?>">
+									<div class="header__icon">
+										<img class="svg" src="<?php echo get_template_directory_uri() . '/assets/img/new/sports.svg' ?>" />
+									</div>
+								</div>
+							</div>
+						</div>
+						<?php get_template_part( 'template-parts/content', 'fold-videos' ); ?>
+					</div>
 				</section>
 
 				<!-- UPCOMING EVENTS -->
@@ -104,13 +117,13 @@ get_header(); ?>
 							</div>
 						</div>
 					</div>
-          <ul class="articles-container">
+          <ul class="articles-container-4 articles-container">
 					
 						<?php
 							// $idObj = get_category_by_slug('sports');
               $args = array(
 								'post_type' => 'post',
-								'posts_per_page' => 5,
+								'posts_per_page' => 4,
                 'post_status' => 'publish',
 								'category__not_in' => '2', 
 								'orderby' => 'date',
@@ -155,13 +168,13 @@ get_header(); ?>
 							</div>
 						</div>
 					</div>
-          <ul class="articles-container">
+          <ul class="articles-container articles-container-4">
             <?php
               $args = array(
                 'post_type' => 'post',
                 'post_status' => 'publish',
                 'category_name' => 'casino',
-								'posts_per_page' => 5,
+								'posts_per_page' => 4,
 								'category__not_in' => '3', 
 								'orderby' => 'date',
 								'orderby' => 'DEC',
@@ -203,12 +216,12 @@ get_header(); ?>
 							</div>
 						</div>
 					</div>
-          <ul class="articles-container">
+          <ul class="articles-container articles-container-4 ">
             <?php
               $args = array(
                 'post_type' => 'post',
                 'post_status' => 'publish',
-								'posts_per_page' => 5,
+								'posts_per_page' => 4,
 								'category__not_in' => '5', 
 								'orderby' => 'date',
 								'orderby' => 'DEC',
