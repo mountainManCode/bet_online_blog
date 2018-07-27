@@ -19,7 +19,6 @@ get_header();
 			</h1>
 		</header><!-- .page-header -->
 
-
 <!-- LATEST ARTICLES -->
 			<section class="front-page__articles x-container">
 				<div class='header'>
@@ -126,7 +125,7 @@ get_header();
 							<div class="header__wrapper-inner">
 								<img class="svg" src="<?php echo get_template_directory_uri() . '/assets/img/new/icon-tag-right.svg' ?>">
 								<div class="header__icon">
-									<img class="svg" src="<?php echo get_template_directory_uri() . '/assets/img/new/sports.svg' ?>" />
+									<img class="svg" src="<?php echo get_template_directory_uri() . '/assets/img/new/icon-video.svg' ?>" />
 								</div>
 							</div>
 						</div>

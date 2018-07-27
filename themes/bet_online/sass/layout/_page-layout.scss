@@ -41,20 +41,26 @@
     }
   }
 
-  .archive-title {
+  .archive__title {
     width: 100%;
     height: 100%;
     margin: 10px 0;
+    padding: 20px 15px 10px 15px;
+    font-family: $font__main;
+    font-size: $font-size__article-main-title;
+    font-weight: bold;
+    font-style: italic;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: $color__text-main-title;
+    text-transform: capitalize;
+
+    @include tablet {
+      margin: 10px auto;
+    }
     @include desktop {
-      font-family: $font__main;
-      font-size: $font-size__article-main-title;
-      font-weight: bold;
-      font-style: italic;
-      font-stretch: normal;
-      line-height: normal;
-      letter-spacing: normal;
-      color: $color__text-main-title;
-      text-transform: capitalize;
+      max-width: 1200px;
     }
   }
 }

@@ -6,32 +6,39 @@
 	?>
 <li class="video-wrapper">
 <a href="<?php echo CFS()->get('video_link');?>" class="video-link">
+<div class="video__play-button">
+      <img class="svg" src="<?php echo get_template_directory_uri() . '/assets/img/new/icon-play.svg' ?>" />
+    </div>
       
   <div id="video-hero" class="video-hero" style="background-image: url('<?php echo $video_hero[0]; ?>')">
+
+
+
   <section id='video__meta' class='video__meta'>
     <div class="video__top-content">
       <?php echo CFS()->get('time'); ?>
     </div>
-      <div class="video__bottom-content bottom-content">
-        <div class="video__cat-date">
 
-          <span id="video__category" class="video__category">
-            <object id="x-category">
-              <?php echo the_category(); ?>
-            </object>
-          </span>
+    <div class="video__bottom-content bottom-content">
+      <div class="video__cat-date">
 
-          <span id="video__date" class="video__date date">
-            <?php echo get_the_date(); ?>
-          </span>
-        </div>
+        <span id="video__category" class="video__category">
+          <object id="x-category">
+            <?php echo the_category(); ?>
+          </object>
+        </span>
 
-        <h2 id="video__title" class="video__title title">
-          <?php the_title();?>
-        </h2>
-      
+        <span id="video__date" class="video__date date">
+          <?php echo get_the_date(); ?>
+        </span>
       </div>
-    </section>
+
+      <h2 id="video__title" class="video__title title">
+        <?php the_title();?>
+      </h2>
+    
+    </div>
+  </section>
   </div>
 </a>
 </li>

@@ -5,6 +5,7 @@ section.front-page__videos {
   margin: 0;
   padding: 20px 25px 10px 25px;
   display: flex;
+  background: linear-gradient(to top, #f6f6f5, rgba(0, 0, 0, 0.1));
 
   @include desktop {
     padding: 20px 15px 2rem 15px;
@@ -126,6 +127,25 @@ ul#videos-list {
     max-height: 400px;
     min-width: 100%;
     max-width: 300px;
+    position: relative;
+
+    &:hover,
+    &:focus,
+    &:active {
+      color: $color__link-hover;
+    }
+  }
+
+  div.video__play-button {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: 99;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    @include dark-overlay;
   }
 
   div#video-hero {
@@ -145,6 +165,12 @@ ul#videos-list {
     background-size: cover;
     box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.8);
     @include dark-overlay;
+
+    &:hover,
+    &:focus,
+    &:active {
+      color: $color__link-hover;
+    }
 
     @include tablet {
       height: 65vh;
@@ -232,5 +258,9 @@ ul#videos-list {
   }
   div#video-hero:after {
     background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), #000000);
+  }
+  div#video-hero:hover:after {
+    background: rgba(0, 0, 0, 0.75);
+    color: red;
   }
 }
