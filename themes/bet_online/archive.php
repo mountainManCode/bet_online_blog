@@ -14,33 +14,36 @@ get_header();
 		<main id="main" class="site-main">
 		<div class="archive-wrapper">
 		<header class="page-header">
-				<?php
-				the_archive_description( '<div class="archive-description">', '</div>' );
-				?>
-			</header><!-- .page-header -->
+			<h1 class="archive__title">
+				<?php echo get_the_archive_title(); ?>
+			</h1>
+		</header><!-- .page-header -->
 
 
 <!-- LATEST ARTICLES -->
 			<section class="front-page__articles x-container">
 				<div class='header'>
 					<div class="header__wrapper-outer">
-						<h2 class="header__tag">Sports</h2>
+						<h2 class="header__tag">Latest Articles</h2>
 						<div class="header__wrapper-inner">
 							<img class="svg" src="<?php echo get_template_directory_uri() . '/assets/img/new/icon-tag-right.svg' ?>">
 							<div class="header__icon">
-								<img class="svg" src="<?php echo get_template_directory_uri() . '/assets/img/new/sports.svg' ?>" />
+								<img class="svg" src="<?php echo get_template_directory_uri() . '/assets/img/new/icon-latest-articles.svg' ?>" />
 							</div>
 						</div>
 					</div>
 				</div>
-				<ul class="articles-container-4 articles-container">
+				<ul class="articles-container-5 articles-container">
 				
+				<!-- Filter Parent Categories - Casino, E-Sports, Horses, Poker, Sports -->
+				<?php if (is_category(array('casino', 'e-sports', 'horses', 'poker', 'sports'))) : ?>
+
 					<?php
-					$idObj = get_queried_object()->term_id;
-						// d($idObj);
+						$idObj = get_queried_object()->term_id;
+						
 						$args = array(
 							'post_type' => 'post',
-							'posts_per_page' => 4,
+							'posts_per_page' => 5,
 							'post_status' => 'publish',
 							'category__not_in' => $idObj,
 							// 'post__not_in' => $idObj,
@@ -55,20 +58,63 @@ get_header();
 								),
 						)
 						);
-						$sports_posts = new WP_Query( $args );
+						$latest_posts = new WP_Query( $args );
+ 					?>
+					
+					<?php
+						if ( $latest_posts->have_posts() ) :
 
-					if ( $sports_posts->have_posts() ) :
-
-						while ( $sports_posts->have_posts() ) :
-							$sports_posts->the_post();
+						while ( $latest_posts->have_posts() ) :
+							$latest_posts->the_post();
 					?>
 								
 					<?php get_template_part( 'template-parts/content', 'articles' ); ?>
 
 					<?php endwhile; ?>
 					<?php wp_reset_postdata(); ?>
-					</ul>
+				</ul>
 					<?php endif; ?>
+
+							<!-- Filter Children Categories - eg. NFL, NBA, Slots, Thoroughbred... -->
+				<?php else: ?>
+
+					<?php
+					$idObj = get_queried_object()->term_id;
+						
+						$args = array(
+							'post_type' => 'post',
+							'posts_per_page' => 5,
+							'post_status' => 'publish',
+							// 'category__not_in' => $idObj,
+							// 'post__not_in' => $idObj,
+							'orderby' => 'date',
+							'orderby' => 'DEC',
+							'tax_query' => array(
+								array(
+										'taxonomy' => 'category',
+										'field' => 'term_id',
+										'terms' => array($idObj),
+										'include_children' => true,
+								),
+						)
+						);
+						$latest_posts = new WP_Query( $args );
+						?>
+
+						<?php
+							if ( $latest_posts->have_posts() ) :
+
+							while ( $latest_posts->have_posts() ) :
+								$latest_posts->the_post();
+						?>
+								
+						<?php get_template_part( 'template-parts/content', 'articles' ); ?>
+
+					<?php endwhile; ?>
+					<?php wp_reset_postdata(); ?>
+				</ul>
+					<?php endif; ?>
+				<?php endif; ?>
 				</section> <!-- End of LATEST ARTCILES -->
 				
 				<!-- VIDEOS -->
@@ -87,7 +133,6 @@ get_header();
 					</div>
 					<ul id="videos-list" class="videos-list">
 						<?php
-							$idObj = get_queried_object()->term_id;												
 							$args = array( 'post_type'=>'videos_post_type',
 							'posts_per_page'=> 8,
 							'orderby' => 'date',
