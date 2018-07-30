@@ -15,7 +15,7 @@ get_header();
 		<div class="archive-wrapper">
 		<header class="page-header">
 			<h1 class="archive__title">
-				<?php echo get_the_archive_title(); ?>
+				<?php the_archive_title(); ?>
 			</h1>
 		</header><!-- .page-header -->
 
@@ -158,6 +158,11 @@ get_header();
 				</div>
 			</section>
 				<!-- END OF VIDEOS -->
+
+				 <!-- Betting 101 SECTION -->
+			<section class="betting-101">
+				<?php get_template_part('template-parts/content', 'betting-101'); ?>
+			</section>
 			
 			<!-- UPCOMING EVENTS -->
 			<section class="front-page__events">
@@ -168,7 +173,7 @@ get_header();
 							<div class="header__wrapper-inner">
 								<img class="svg" src="<?php echo get_template_directory_uri() . '/assets/img/new/icon-tag-right.svg' ?>">
 							<div class="header__icon">
-								<img class="svg" src="<?php echo get_template_directory_uri() . '/assets/img/new/sports.svg' ?>" />
+								<img class="svg" src="<?php echo get_template_directory_uri() . '/assets/img/new/icon-upcoming-events.svg' ?>" />
 							</div>
 						</div>
 					</div>

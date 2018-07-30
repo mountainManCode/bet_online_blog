@@ -17,7 +17,7 @@
 
   <li class="article-list">
     <a href="<?php echo get_permalink();?>"	class="article-link">
-      <article id="post-<?php the_ID(); ?>" class="article-wrapper" style="background-image: url('<?php echo $article_hero[0]; ?>')">
+      <article id="article-wrapper" class="article-wrapper" style="background-image: url('<?php echo $article_hero[0]; ?>')">
 
         <section id='article__meta' class='article__meta'>
           <div class="article__top-content">
