@@ -40,7 +40,7 @@
                 <span id='article__date' class='article__date'><?php echo get_the_date(); ?></span>
     
               </div>
-
+              <div class="article__bottom-content">
               <h1 id='article__title' id="article__title" class='article__title'>
                 <?php the_title();?>
               </h1>
@@ -48,7 +48,8 @@
               <div id='article__excerpt' class='article__excerpt'>
                 <?php echo get_the_excerpt();?>
               </div>
-
+              
+              </div>
               <div id="article-hero__append-dots"></div>
 
             </section>

@@ -1,6 +1,7 @@
-.single article {
+.single .site-content {
   display: flex;
   flex-flow: column nowrap;
+  background-color: $color__background-body;
 }
 
 // Divide between content and sidebar
