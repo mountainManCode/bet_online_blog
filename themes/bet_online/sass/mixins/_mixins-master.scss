@@ -20,6 +20,11 @@
     @content;
   }
 }
+@mixin large-desktop {
+  @media (min-width: $large-desktop-width) {
+    @content;
+  }
+}
 
 // Image Opacity Overlay
 @mixin dark-overlay {

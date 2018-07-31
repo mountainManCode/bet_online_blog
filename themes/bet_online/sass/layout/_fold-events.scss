@@ -8,7 +8,6 @@ section.front-page__events {
   background-color: $color__background-events;
 
   @include desktop {
-    // padding: 50px 0 0 0;
     margin: 20px 0 30px 0;
   }
 }
@@ -25,7 +24,8 @@ div#events-container {
 
   @include tablet {
     margin: 0 auto;
-    padding: 40px 25px;
+    // padding: 40px 25px;
+    padding: 0;
   }
   @include desktop {
     max-width: 1200px;

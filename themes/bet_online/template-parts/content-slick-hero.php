@@ -28,9 +28,10 @@
     ?>
 
       <li class="carousel-article">
-        <article id="article__hero-wrapper" class="article__hero-wrapper" style="background-image: url('<?php echo $article_hero[0]; ?>')">
-          
-          <section id='article__content' class='article__content'>
+        <a href="<?php echo get_permalink();?>"	class="article-link">
+          <article id="article__hero-wrapper" class="article__hero-wrapper" style="background-image: url('<?php echo $article_hero[0]; ?>')">
+            
+            <section id='article__content' class='article__content'>
               <div class="article__top-content">
     
                 <object>
@@ -40,17 +41,19 @@
     
               </div>
 
-              <a href="<?php echo get_permalink();?>"	class="article-link">
-                <div id='article__title' class='article__title'>
-                  <?php the_title();?>
-                </div>
-                <div id='article__excerpt' class='article__excerpt'>
-                  <?php echo get_the_excerpt();?>
-                </div>
-              </a>
+              <h1 id='article__title' id="article__title" class='article__title'>
+                <?php the_title();?>
+              </h1>
+
+              <div id='article__excerpt' class='article__excerpt'>
+                <?php echo get_the_excerpt();?>
+              </div>
+
+              <div id="article-hero__append-dots"></div>
 
             </section>
           </article>
+        </a>
       </li>
 
     <?php endif; ?>

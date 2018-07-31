@@ -7,6 +7,7 @@
       )  ) ) :
     ?>
   <li class="event-list">
+    <a href="<?php echo get_permalink();?>">
       <div id="event" class="event" style="background-image: url('<?php echo $event_hero[0]; ?>')">
 
         <section id='event__meta' class='event__meta'>
@@ -30,9 +31,10 @@
             </div>
           </div>
 
-          <a href="<?php echo get_permalink();?>"><button class="event__button">View Event</button></a>
+          <button class="event__button">View Event</button>
           
         </section>
       </div>
+      </a>
     </li>
   <?php endif; ?>

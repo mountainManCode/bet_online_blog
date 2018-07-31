@@ -13,11 +13,16 @@ get_header(); ?>
 
 			<!-- Slick Hero Carousel -->
 				<section id="hero-carousel" class="hero-carousel">
+					<!-- <div class="z-wrapper"> -->
 					<ul id="hero-article" class="hero-article">
+	
 						<?php get_template_part( 'template-parts/content', 'slick-hero' ); ?>
 					
+					<div class="yyy">
 					<ul id="slider-nav" class="slider-nav">
 						<?php get_template_part( 'template-parts/content', 'slick-nav' ); ?>
+						</div>
+
 				</section>
 
 				<!-- LATEST ARTICLES -->
