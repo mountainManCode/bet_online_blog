@@ -112,7 +112,7 @@ get_header(); ?>
 								<div class="header__wrapper-inner">
 									<img class="svg" src="<?php echo get_template_directory_uri() . '/assets/img/new/icon-tag-right.svg' ?>">
 								<div class="header__icon">
-									<img class="svg" src="<?php echo get_template_directory_uri() . '/assets/img/new/sports.svg' ?>" />
+									<img class="svg" src="<?php echo get_template_directory_uri() . '/assets/img/new/icon-upcoming-events.svg' ?>" />
 								</div>
 							</div>
 						</div>

@@ -126,6 +126,7 @@
     slidesToShow: 1,
     slidesToScroll: 1,
     swipe: true,
+    speed: 300,
 
     responsive: [
       {

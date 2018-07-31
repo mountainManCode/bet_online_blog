@@ -7,7 +7,7 @@
       )  ) ) :
     ?>
   <li class="event-list">
-    <a href="<?php echo get_permalink();?>">
+    <a href="<?php echo get_permalink();?>" class="event-link">
       <div id="event" class="event" style="background-image: url('<?php echo $event_hero[0]; ?>')">
 
         <section id='event__meta' class='event__meta'>
