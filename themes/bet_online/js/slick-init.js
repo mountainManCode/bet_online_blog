@@ -4,6 +4,7 @@
     // mobileFirst: true,
     arrows: false,
     dots: true,
+    appendDots: '#article-hero__append-dots',
     lazyLoad: 'ondemand',
     pauseOnDotsHover: true,
     slidesToShow: 1,
