@@ -7,6 +7,30 @@
  * @package Bet_Online
  */
 
+ function load_posts_by_ajax_callback() {
+	check_ajax_referer('load_more_posts', 'security');
+	$paged = $_POST['page'];
+	$args = array(
+		'post_type' => 'post',
+		'post_status' => 'publish',
+		'posts_per_page' => '2',
+		'paged' => $paged,
+	);
+	$my_posts = new WP_Query( $args );
+	if ( $my_posts->have_posts() ) :
+		?>
+		<?php while ( $my_posts->have_posts() ) : $my_posts->the_post() ?>
+			<h2><?php the_title() ?></h2>
+			<?php the_excerpt() ?>
+		<?php endwhile ?>
+		<?php
+	endif;
+
+	wp_die();
+}
+	add_action('wp_ajax_load_posts_by_ajax', 'load_posts_by_ajax_callback');
+	add_action('wp_ajax_nopriv_load_posts_by_ajax', 'load_posts_by_ajax_callback');
+
 if ( ! function_exists( 'bet_online_setup' ) ) :
 	/**
 	 * Sets up theme defaults and registers support for various WordPress features.
@@ -175,6 +199,8 @@ function bet_online_scripts() {
 	wp_enqueue_script('bs_js', 'https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js');
 
 	wp_enqueue_script( 'bet_online-navigation', get_template_directory_uri() . '/build/js/navigation.min.js', array(), '20151215', true );
+
+	wp_enqueue_script( 'load-more', get_template_directory_uri() . '/build/js/load-more.min.js', array(), '20151215', true );
 
 	wp_enqueue_script( 'bet_online-layout', get_template_directory_uri() . '/build/js/layout.min.js', array(), '20151215', true );
 

@@ -1,11 +1,13 @@
-.post-type-archive-videos {
+.post-type-archive-videos,
+.page {
   .site-main {
     display: flex;
     flex-flow: column nowrap;
     justify-content: center;
     background-color: $color__background-body;
 
-    .archive-videos__wrapper {
+    div.archive__videos-wrapper,
+    div.archive__articles-wrapper {
       width: 100%;
       margin: 0;
       padding: 20px 30px 10px 30px;
@@ -33,7 +35,8 @@
       justify-content: space-between;
     }
 
-    li.video-wrapper {
+    li.video-wrapper,
+    li.article-list {
       padding: 7.5px 0;
       flex-basis: 100%;
 

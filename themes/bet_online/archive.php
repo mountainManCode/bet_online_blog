@@ -31,9 +31,13 @@ get_header();
 							</div>
 						</div>
 					</div>
+					<div class="header__view-more">
+						<a href="<?php echo home_url() ?>/articles/<?php echo get_queried_object()->slug; ?>">View More <span> > </span></a>
+						
+					</div>
 				</div>
+
 				<ul class="articles-container-5 articles-container">
-				
 				<!-- Filter Parent Categories - Casino, E-Sports, Horses, Poker, Sports -->
 				<?php if (is_category(array('casino', 'e-sports', 'horses', 'poker', 'sports'))) : ?>
 

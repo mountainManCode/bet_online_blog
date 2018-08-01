@@ -2,7 +2,7 @@
   $('#hero-article').slick({
     arrows: false,
     dots: true,
-    appendDots: '#article-hero__append-dots',
+    appendDots: '.article__content',
     lazyLoad: 'ondemand',
     pauseOnDotsHover: true,
     slidesToShow: 1,
@@ -18,8 +18,8 @@
 
   $('#slider-nav').slick({
     asNavFor: '#hero-article',
-    // autoplay: true,
-    // autoplaySpeed: 3500,
+    autoplay: true,
+    autoplaySpeed: 3500,
     respondTo: 'window',
     mobileFirst: true,
     arrows: false,
@@ -33,8 +33,7 @@
       {
         breakpoint: 991,
         settings: {
-          // autoplay: true,
-          // autoplaySpeed: 3500,
+          autoplay: false,
           asNavFor: '#hero-article',
           accessibility: true,
           lazyLoad: 'ondemand',
@@ -48,10 +47,6 @@
       }
     ]
   });
-
-  // $(window).on('resize orientationchange', function() {
-  //   $('.#slider-nav').resize; //slick('resize');
-  // });
 
   /****** CAROUSEL FOR VIDEOS FOLD *********/
   $('#events-wrapper').slick({
