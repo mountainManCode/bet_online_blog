@@ -117,7 +117,8 @@ get_header();
 				</section> <!-- End of LATEST ARTCILES -->
 				
 				<!-- VIDEOS -->
-				<section class="front-page__videos">
+				<section class="archive-page__videos">
+				<div class="videos__top-border-gradient"></div>
 				<div id="videos-container" class="videos-container">
 					<div class="header">
 						<div class="header__wrapper-outer">
@@ -132,7 +133,7 @@ get_header();
 					</div>
 					<ul id="videos-list" class="videos-list">
 						<?php
-							$args = array( 'post_type'=>'videos_post_type',
+							$args = array( 'post_type'=>'videos',
 							'posts_per_page'=> 8,
 							'orderby' => 'date',
 							'orderby' => 'DEC',
@@ -219,7 +220,7 @@ get_header();
 						<?php get_sidebar(); ?>
 				</section><!-- .entry-content -->
 
-      </div> <!-- front-page-wrapper -->
+      </div> <!-- archive-page-wrapper -->
 		</main><!-- #main -->
 	</div><!-- #primary -->
 

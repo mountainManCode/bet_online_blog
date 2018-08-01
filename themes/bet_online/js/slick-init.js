@@ -18,8 +18,8 @@
 
   $('#slider-nav').slick({
     asNavFor: '#hero-article',
-    autoplay: true,
-    autoplaySpeed: 3500,
+    // autoplay: true,
+    // autoplaySpeed: 3500,
     respondTo: 'window',
     mobileFirst: true,
     arrows: false,

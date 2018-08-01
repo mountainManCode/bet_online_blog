@@ -1,0 +1,49 @@
+.post-type-archive-videos {
+  .site-main {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    background-color: $color__background-body;
+
+    .archive-videos__wrapper {
+      width: 100%;
+      margin: 0;
+      padding: 20px 30px 10px 30px;
+      display: flex;
+      flex-flow: column nowrap;
+
+      @include tablet {
+        padding-top: 40px;
+      }
+      @include desktop {
+        padding: 40px 35px 30px 35px;
+      }
+    }
+  }
+
+  ul.videos-list {
+    height: 100%;
+    width: 100%;
+    padding: 5px 0 15px 0;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+
+    @include tablet {
+      justify-content: space-between;
+    }
+
+    li.video-wrapper {
+      padding: 7.5px 0;
+      flex-basis: 100%;
+
+      @include tablet {
+        padding: 15px 0;
+        flex-basis: 45%;
+      }
+      @include desktop {
+        padding: 20px 0;
+      }
+    }
+  }
+}

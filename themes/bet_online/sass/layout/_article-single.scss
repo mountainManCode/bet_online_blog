@@ -43,23 +43,23 @@
   }
 }
 
-.post {
-  .nav-hierarchy {
-    font-family: $font__main;
-    font-size: $font-size__main;
-    font-weight: 600;
-    font-style: normal;
-    font-stretch: normal;
-    line-height: normal;
-    letter-spacing: normal;
+.nav-hierarchy {
+  font-family: $font__main;
+  font-size: $font-size__main;
+  font-weight: 600;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
 
-    a {
-      color: $color__text-style-1;
-    }
-    .nav-current-article {
-      color: $color__text-cat;
-    }
+  a {
+    color: $color__text-style-1;
   }
+  .nav-current-article {
+    color: $color__text-cat;
+  }
+}
+.post {
   .entry-content {
     display: flex;
     flex-flow: column nowrap;

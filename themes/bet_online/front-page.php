@@ -21,7 +21,7 @@ get_header(); ?>
 						<ul id="slider-nav" class="slider-nav">
 
 							<?php get_template_part( 'template-parts/content', 'slick-nav' ); ?>
-							
+
 					</div>
 				</section>
 
@@ -36,6 +36,9 @@ get_header(); ?>
 									<img class="svg" src="<?php echo get_template_directory_uri() . '/assets/img/new/icon-latest-articles.svg' ?>">
 								</div>
 							</div>
+						</div>
+						<div class="header__view-more">
+							<a href="<?php echo home_url() ?>/articles">View More <span> > </span></a>
 						</div>
 					</div>
 						<?php wp_reset_postdata(); ?>
@@ -75,6 +78,9 @@ get_header(); ?>
 				
 				<!-- VIDEOS -->
 				<section class="front-page__videos">
+					<div class="videos__top-border-gradient">
+
+					</div>
 					<div id="videos-container" class="videos-container">
 						<div class="header">
 							<div class="header__wrapper-outer">
@@ -86,10 +92,14 @@ get_header(); ?>
 									</div>
 								</div>
 							</div>
+							<div class="header__view-more">
+								<a href="<?php echo home_url() ?>/videos">View More <span>  ></span></a>
+							</div>
 						</div>
+
 							<ul id="videos-list" class="videos-list">
 								<?php
-									$args = array( 'post_type'=>'videos_post_type', 'posts_per_page'=> 8);
+									$args = array( 'post_type'=>'videos', 'posts_per_page'=> 8);
 									
 									$posts = get_posts( $args );
 								?>
@@ -148,6 +158,9 @@ get_header(); ?>
 								</div>
 							</div>
 						</div>
+						<div class="header__view-more">
+							<a href="<?php echo home_url() ?>/sports">View More <span> > </span></a>
+						</div>
 					</div>
           <ul class="articles-container-4 articles-container">
 					
@@ -199,6 +212,9 @@ get_header(); ?>
 								</div>
 							</div>
 						</div>
+						<div class="header__view-more">
+							<a href="<?php echo home_url() ?>/casino">View More <span> > </span></a>
+						</div>
 					</div>
           <ul class="articles-container articles-container-4">
             <?php
@@ -246,6 +262,9 @@ get_header(); ?>
 									<img class="svg" src="<?php echo get_template_directory_uri() . '/assets/img/new/horses.svg' ?>" />
 								</div>
 							</div>
+						</div>
+						<div class="header__view-more">
+							<a href="<?php echo home_url() ?>/horses">View More <span> > </span></a>
 						</div>
 					</div>
           <ul class="articles-container articles-container-4 ">
