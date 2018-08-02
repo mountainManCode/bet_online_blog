@@ -24,11 +24,29 @@
 
             <object>
               <span id='article__category' class='article__category'>
-                <?php echo get_the_category_list(', '); ?>
-                <!-- <?php wp_list_categories( array('child_of' => 0 ) ) ?> -->
-                <!-- <?php $category = get_the_category(); 
-$parent = get_category($category[1]->category_parent);
-echo $parent->slug; ?> -->
+
+                <a href="
+                  <?php echo home_url(); ?>/articles/<?php
+                    $category = get_the_category(); 
+                    $category_parent_id = $category[0]->category_parent;
+                    if ( $category_parent_id != 0 ) {
+                      $category_parent = get_term( $category_parent_id, 'category' );
+                      $css_slug = $category_parent->slug;
+                      echo $css_slug;
+                    } else {
+                      return '';
+                    }
+                  ?>/<?php $category = get_the_category();
+                    $cat_slug = $category[0]->slug;
+                    echo $cat_slug;
+                  ?>"
+                >
+                <?php $category = get_the_category();
+                    $cat_name = $category[0]->name;
+                    echo $cat_name;
+                  ?>
+                  </a>
+
               </span>
             </object>
             <span id='article__date' class='article__date'><?php echo get_the_date(); ?></span>

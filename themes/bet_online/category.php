@@ -20,13 +20,27 @@ get_header();
         </span>
       <?php 
         if (get_queried_object()->category_parent != 0) : ?>
-        <!-- <span>
+        
+        <span>
+          <a 
           <?php 
-            $cat_id = get_queried_object()->category_parent;
-            get_cat_name( $cat_id );
-            // d($cat_id);
-          ?> > 
-        </span> -->
+            $category = get_the_category(); 
+            $category_parent_id = $category[0]->category_parent;
+            if ( $category_parent_id != 0 ) {
+              $category_parent = get_term( $category_parent_id, 'category' );
+              $css_name = $category_parent->name;
+              $css_slug = $category_parent->slug;
+       
+                } 
+                ?>
+
+            href="<?php echo esc_url( home_url( '/articles' ) ); ?>/<?php echo $css_slug ?>">
+            
+              <?php 
+              echo $css_name; ?>
+          </a>
+           > 
+        </span>
         <?php endif; ?>
         <span><?php the_archive_title(); ?></span>
 
