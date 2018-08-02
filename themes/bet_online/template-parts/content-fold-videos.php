@@ -5,7 +5,7 @@
         ) ) ) :
 	?>
 <li class="video-wrapper">
-  <a href="<?php echo CFS()->get('video_link');?>" class="video-link">
+  <a href="<?php echo CFS()->get('video_link'); ?>" class="video-link">
       
   <div id="video-hero" class="video-hero" style="background-image: url('<?php echo $video_hero[0]; ?>')">
 

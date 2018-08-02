@@ -243,7 +243,16 @@ ul.videos-list {
 
         span#video__category {
           // @include styles-category;
+          position: relative;
           list-style: none;
+          pointer-events: auto;
+
+          object.x-category {
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            z-index: 99;
+          }
 
           object > ul.post-categories {
             margin: 0;

@@ -29,7 +29,7 @@ get_header();
         $paged = ( get_query_var('page') ) ? get_query_var('page') : 1;
 
         $args_latest = array(
-          'post_type' => 'post',
+          'post_type' => array('post', 'videos'),
           'posts_per_page' => 8,
           'tag_name' => $idObj,
           'ignore_sticky_posts' => false,
@@ -39,19 +39,23 @@ get_header();
           'paging' => 1,
         );
       ?>
-            <ul class="articles-list">
+
+      <ul class="articles-list videos-list">
+
       <?php
       $latest_articles = new WP_Query( $args_latest );
-
         if ( $latest_articles->have_posts() ) :
       ?>
 
           <?php
             while ( $latest_articles->have_posts() ) :
             $latest_articles->the_post();	
-          ?>            
+          ?>
+          <?php if(get_post_type() === 'post') : ?>
             <?php get_template_part( 'template-parts/content', 'articles' ); ?>
-
+          <?php elseif(get_post_type() === 'videos') :?>
+            <?php get_template_part( 'template-parts/content', 'fold-videos' ); ?>
+          <?php endif; ?>
           <?php endwhile; ?>
         </ul>
 

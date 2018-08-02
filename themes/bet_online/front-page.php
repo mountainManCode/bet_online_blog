@@ -44,7 +44,6 @@ get_header(); ?>
 						<?php wp_reset_postdata(); ?>
 						<?php
               $args_latest = array(
-								'category__not_in' => array( 2, 3, 4, 5, 6 ),
 								'ignore_sticky_posts' => true, 
 								'post_type' => 'post', 
 								'posts_per_page' => 5,
@@ -56,9 +55,6 @@ get_header(); ?>
 						?>
 							<?php
               $latest_articles = new WP_Query( $args_latest );
-
-							// kint debugger
-							// d($latest_articles);
 
             if ( $latest_articles->have_posts() ) :
 ?>
@@ -170,7 +166,6 @@ get_header(); ?>
 								'post_type' => 'post',
 								'posts_per_page' => 4,
                 'post_status' => 'publish',
-								'category__not_in' => '2', 
 								'orderby' => 'date',
 								'orderby' => 'DEC',
 								'tax_query' => array(
@@ -223,7 +218,6 @@ get_header(); ?>
                 'post_status' => 'publish',
                 'category_name' => 'casino',
 								'posts_per_page' => 4,
-								'category__not_in' => '3', 
 								'orderby' => 'date',
 								'orderby' => 'DEC',
 								'tax_query' => array(
@@ -273,7 +267,6 @@ get_header(); ?>
                 'post_type' => 'post',
                 'post_status' => 'publish',
 								'posts_per_page' => 4,
-								'category__not_in' => '5', 
 								'orderby' => 'date',
 								'orderby' => 'DEC',
 								'tax_query' => array(

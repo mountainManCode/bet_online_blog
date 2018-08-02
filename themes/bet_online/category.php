@@ -23,30 +23,25 @@ get_header();
         
         <span>
           <a 
-          <?php 
-            $category = get_the_category(); 
-            $category_parent_id = $category[0]->category_parent;
-            if ( $category_parent_id != 0 ) {
-              $category_parent = get_term( $category_parent_id, 'category' );
-              $css_name = $category_parent->name;
-              $css_slug = $category_parent->slug;
-       
-                } 
-                ?>
-
+            <?php 
+              $category = get_the_category(); 
+              $category_parent_id = $category[0]->category_parent;
+              if ( $category_parent_id != 0 ) {
+                $category_parent = get_term( $category_parent_id, 'category' );
+                $css_name = $category_parent->name;
+                $css_slug = $category_parent->slug;
+        
+              } 
+            ?>
             href="<?php echo esc_url( home_url( '/articles' ) ); ?>/<?php echo $css_slug ?>">
             
-              <?php 
-              echo $css_name; ?>
+              <?php echo $css_name; ?>
           </a>
            > 
         </span>
         <?php endif; ?>
         <span><?php the_archive_title(); ?></span>
-
-
       </h4>
-  
 
       <?php wp_reset_postdata(); ?>
       <?php
@@ -66,23 +61,26 @@ get_header();
           'paging' => 1,
         );
       ?>
-            <ul class="articles-list">
-      <?php
-      $latest_articles = new WP_Query( $args_latest );
 
-        if ( $latest_articles->have_posts() ) :
-      ?>
+      <ul class="articles-list">
 
-          <?php
-            while ( $latest_articles->have_posts() ) :
-            $latest_articles->the_post();	
-          ?>            
-            <?php get_template_part( 'template-parts/content', 'articles' ); ?>
+        <?php
+          $latest_articles = new WP_Query( $args_latest );
 
-          <?php endwhile; ?>
-        </ul>
+          if ( $latest_articles->have_posts() ) :
+        ?>
 
-        <?php wp_reset_postdata(); ?>
+        <?php
+          while ( $latest_articles->have_posts() ) :
+          $latest_articles->the_post();	
+        ?>            
+        <?php get_template_part( 'template-parts/content', 'articles' ); ?>
+
+        <?php endwhile; ?>
+
+      </ul>
+
+      <?php wp_reset_postdata(); ?>
       <?php endif; ?>
           
     </div> <!-- archive-page-wrapper -->

@@ -41,11 +41,11 @@
                     echo $cat_slug;
                   ?>"
                 >
-                <?php $category = get_the_category();
+                  <?php $category = get_the_category();
                     $cat_name = $category[0]->name;
                     echo $cat_name;
                   ?>
-                  </a>
+                </a>
 
               </span>
             </object>

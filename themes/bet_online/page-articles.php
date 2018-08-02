@@ -41,9 +41,6 @@
       <?php
       $latest_articles = new WP_Query( $args_latest );
 
-      // kint debugger
-      // d($latest_articles);
-
         if ( $latest_articles->have_posts() ) :
       ?>
 
