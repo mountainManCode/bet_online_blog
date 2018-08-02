@@ -91,22 +91,22 @@
     &:hover h2#article__title {
       color: $color__link-hover;
     }
-    .article__meta {
+    section.article__meta {
       padding: 10px;
       font-family: $font__main;
       line-height: $font__line-height-body;
       text-decoration: none;
     }
 
-    .article__meta {
+    section.article__meta {
       padding: 10px 12px;
       #article__category > a {
         @include styles-category;
       }
-      .article__date {
+      span.article__date {
         @include styles-date;
       }
-      .article__title {
+      h2.article__title {
         font-size: $font-size__article-tn-title;
         color: #e7e7e7;
         font-weight: 600;
@@ -119,10 +119,10 @@
       }
     }
   }
-  .article-wrapper:after {
+  article.article-wrapper:after {
     background: rgba(0, 0, 0, 0.3);
   }
-  .article-wrapper:hover:after {
+  article.article-wrapper:hover:after {
     background: rgba(0, 0, 0, 0.75);
   }
 }

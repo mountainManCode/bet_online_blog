@@ -1,6 +1,6 @@
 <?php
 /**
- * The template for displaying archive pages
+ * The template for displaying Articles Archive
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
@@ -39,14 +39,14 @@ get_header();
 		$archive_articles = new WP_Query( $args );
 
 		// kint debugger
-		// d($latest_articles);
+		d($archive_articles);
 
-			if ( $latest_articles->have_posts() ) :
+			if ( $archive_articles->have_posts() ) :
 		?>
 
 				<?php
-					while ( $latest_articles->have_posts() ) :
-					$latest_articles->the_post();	
+					while ( $archive_articles->have_posts() ) :
+					$archive_articles->the_post();	
 				?>            
 					<?php get_template_part( 'template-parts/content', 'articles' ); ?>
 

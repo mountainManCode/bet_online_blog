@@ -1,4 +1,7 @@
-.page {
+.page,
+.category,
+.tag,
+.author {
   .site-main {
     display: flex;
     flex-flow: column nowrap;
@@ -25,6 +28,7 @@
   ul.articles-list {
     height: 100%;
     width: 100%;
+    margin: 0;
     padding: 5px 0 15px 0;
     display: flex;
     flex-flow: row wrap;

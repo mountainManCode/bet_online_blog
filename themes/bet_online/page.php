@@ -17,55 +17,167 @@ get_header();
 
 <div id="primary" class="content-area">
 <main id="main" class="site-main">
-	<div class="archive__articles-wrapper">
+<div class="archive-wrapper">
+<header class="page-header">
+	<h1 class="archive__title">
+		<?php echo get_the_title(); ?>
+	</h1>
+</header><!-- .page-header -->
 
-	<h4 class="nav-hierarchy"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a> > 
-			<span>
-				<?php 
-					$the_page = sanitize_post( $GLOBALS['wp_the_query']->get_queried_object() );
-					$pageTitle = $the_page->post_title;
-					echo esc_html($pageTitle);
+<!-- LATEST ARTICLES -->
+<section class="front-page__articles x-container">
+<div class="header">
+	<div class="header__wrapper-outer">
+		<h2 class="header__tag">Latest Articles</h2>
+		<div class="header__wrapper-inner">
+			<img class="svg" src="<?php echo get_template_directory_uri() . '/assets/img/new/icon-tag-right.svg' ?>">
+			<div id="header__icon" class="header__icon">
+				<img class="svg" src="<?php echo get_template_directory_uri() . '/assets/img/new/icon-latest-articles.svg' ?>">
+			</div>
+		</div>
+	</div>
+	<div class="header__view-more">
+		<a href="<?php echo home_url() ?>/articles/<?php echo get_queried_object()->post_name; ?>">View More <span> > </span></a>
+	</div>
+</div>
+	<?php wp_reset_postdata(); ?>
+	<?php
+					$idObj = get_queried_object()->post_name;
+
+						$args = array(
+							'post_type' => 'post',
+							'posts_per_page' => 5,
+							'post_status' => 'publish',
+							'category_name' => $idObj,
+							'orderby' => 'date',
+							'orderby' => 'DEC',
+						);
+						$latest_posts = new WP_Query( $args );
+						?>
+					<ul class="articles-container articles-container-5">
+						<?php
+							if ( $latest_posts->have_posts() ) :
+
+							while ( $latest_posts->have_posts() ) :
+								$latest_posts->the_post();
+						?>       
+		<?php get_template_part( 'template-parts/content', 'articles' ); ?>
+			
+	<?php endwhile; ?>
+		</ul>	
+
+	<?php wp_reset_postdata(); ?>
+<?php endif; ?>
+</section> <!-- End of LATEST ARTICLES -->
+		
+		<!-- VIDEOS -->
+		<section class="archive-page__videos">
+		<div class="videos__top-border-gradient"></div>
+		<div id="videos-container" class="videos-container">
+			<div class="header">
+				<div class="header__wrapper-outer">
+					<h2 class="header__tag">Videos</h2>
+					<div class="header__wrapper-inner">
+						<img class="svg" src="<?php echo get_template_directory_uri() . '/assets/img/new/icon-tag-right.svg' ?>">
+						<div class="header__icon">
+							<img class="svg" src="<?php echo get_template_directory_uri() . '/assets/img/new/icon-video.svg' ?>" />
+						</div>
+					</div>
+				</div>
+			</div>
+			<ul id="videos-list" class="videos-list">
+				<?php
+					$idObj = get_queried_object()->post_name;
+
+					$args = array( 'post_type'=>'videos',
+					'posts_per_page'=> 8,
+					'orderby' => 'date',
+					'orderby' => 'DEC',
+					'category_name' => $idObj,
+				// 	'tax_query' => array(
+				// 		array(
+				// 				'taxonomy' => 'category',
+				// 				'field' => 'term_id',
+				// 				'terms' => array($idObj),
+				// 				'include_children' => true,
+				// 		),
+				// )
+				);
+					
+					$posts = get_posts( $args );
 				?>
 
-			</span>
-		</h4>
+				<?php foreach ( $posts as $post ) : setup_postdata( $post ); ?>
 
-		<?php wp_reset_postdata(); ?>
-		<?php
-			$paged = ( get_query_var('page') ) ? get_query_var('page') : 1;
-			$args_latest = array(
-				'post_type' => 'post',
-				'posts_per_page' => 8,
-				'category__not_in' => array( 2, 3, 4, 5, 6 ),
-				'ignore_sticky_posts' => false,
-				'post_status' => 'publish',
-				'orderby' => 'date', 
-				'order' => 'DEC',
-				'paging' => 1,
-			);
-		?>
-					<ul class="articles-list">
-		<?php
-		$latest_articles = new WP_Query( $args_latest );
+				<?php get_template_part( 'template-parts/content', 'fold-videos' ); ?>
 
-		// kint debugger
-		// d($latest_articles);
+				<?php endforeach; wp_reset_postdata(); ?>
+			</ul>		
+		</div>
+	</section>
+		<!-- END OF VIDEOS -->
 
-			if ( $latest_articles->have_posts() ) :
-		?>
-
+		 <!-- Betting 101 SECTION -->
+	<section class="betting-101">
+		<?php get_template_part('template-parts/content', 'betting-101'); ?>
+	</section>
+	
+	<!-- UPCOMING EVENTS -->
+	<section class="front-page__events">
+		<div id="events-container" class="events-container">
+			<div class="header">
+				<div class="header__wrapper-outer">
+					<h2 class="header__tag">Upcoming Events</h2>
+					<div class="header__wrapper-inner">
+						<img class="svg" src="<?php echo get_template_directory_uri() . '/assets/img/new/icon-tag-right.svg' ?>">
+					<div class="header__icon">
+						<img class="svg" src="<?php echo get_template_directory_uri() . '/assets/img/new/icon-upcoming-events.svg' ?>" />
+					</div>
+				</div>
+			</div>
+			</div>
+			<ul id="events-wrapper" class="events-wrapper">
 				<?php
-					while ( $latest_articles->have_posts() ) :
-					$latest_articles->the_post();	
-				?>            
-					<?php get_template_part( 'template-parts/content', 'articles' ); ?>
+					$idObj = get_queried_object()->post_name;
 
-				<?php endwhile; ?>
+					$args = array(
+						'post_type'=>'events_post_type',
+						// 'tax_query' => array(
+						// 	array(
+						// 			'taxonomy' => 'category',
+						// 			'field' => 'term_id',
+						// 			'terms' => array($idObj),
+						// 			'include_children' => true,
+						// 	),
+						// ),
+						'category_name' => $idObj,
+						'post_status'=>'future',
+						'orderBy'=>'post_date',
+						'order'=>'ASC',
+						'posts_per_page'=> 8, 
+					);
+					
+					$event_posts = new WP_Query( $args );
+					
+					if ( $event_posts->have_posts() ) : 
+						while ( $event_posts->have_posts() ) : 
+						$event_posts->the_post();
+				?>
+
+				<?php get_template_part( 'template-parts/content', 'events' ); ?>
+						<?php endwhile; ?>
+					<?php endif; ?>
+				<?php wp_reset_postdata(); ?>
 			</ul>
+		</div>
+	</section>
 
-			<?php wp_reset_postdata(); ?>
-		<?php endif; ?>
-				
+		<!--  ARCHIVE/CHANNEL CONTENT SECTION -->
+		<section class="entry-content">
+			<div class="entry-content__area"><?php the_content(); ?></div>
+				<?php get_sidebar(); ?>
+		</section><!-- .entry-content -->
+
 	</div> <!-- archive-page-wrapper -->
 </main><!-- #main -->
 </div><!-- #primary -->

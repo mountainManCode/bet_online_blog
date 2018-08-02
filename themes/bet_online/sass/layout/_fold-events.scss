@@ -3,13 +3,13 @@ section.front-page__events {
   min-width: 100%;
   height: auto;
   margin: 0;
-  padding: 0;
+  padding: 30px 0;
   display: flex;
   background-color: $color__background-events;
 
   @include desktop {
     margin: 0 0 30px 0px;
-    padding-top: 50px;
+    padding: 50px 0 0 0;
   }
 }
 
@@ -17,8 +17,7 @@ div#events-container {
   height: 100%;
   width: 100%;
   margin: 0;
-  padding: 0;
-  padding: 20px 15px 10px 15px;
+  padding: 20px 25px 10px 25px;
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
@@ -26,11 +25,11 @@ div#events-container {
 
   @include tablet {
     margin: 0 auto;
-    // padding: 40px 25px;
-    padding: 0;
+    padding: 40px 25px;
   }
   @include desktop {
     max-width: 1200px;
+    padding: 50px 40px;
   }
 }
 
@@ -48,13 +47,21 @@ ul.events-wrapper {
   list-style: none;
 
   button.slick-prev {
+    left: -17.5px;
     @include tablet {
-      left: -15px;
+      left: -20px;
+    }
+    @include desktop {
+      left: -25px;
     }
   }
   button.slick-next {
+    right: -17.5px;
     @include tablet {
-      right: -15px;
+      right: -20px;
+    }
+    @include desktop {
+      right: -25px;
     }
   }
   button.slick-arrow {
@@ -120,7 +127,6 @@ ul.events-wrapper {
     }
     @include desktop {
       margin-left: 15px;
-      // min-height: 430px;
     }
   }
 
@@ -213,7 +219,8 @@ ul.events-wrapper {
 
     button.event__button {
       width: 80%;
-      max-width: 200px;
+      min-width: 200px;
+      // max-width: 200px;
       max-height: 45px;
       align-self: center;
       text-align: center;
@@ -225,11 +232,6 @@ ul.events-wrapper {
       font-weight: 600;
       text-align: center;
       color: $color__border-button-event;
-
-      // &:hover {
-      //   background-color: $color__border-button-event;
-      //   color: $color__text-style-3;
-      // }
     }
   }
   div#event:after {

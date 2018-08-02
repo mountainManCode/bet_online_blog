@@ -159,7 +159,7 @@ get_header(); ?>
 							</div>
 						</div>
 						<div class="header__view-more">
-							<a href="<?php echo home_url() ?>/sports">View More <span> > </span></a>
+							<a href="<?php echo home_url() ?>/articles/sports">View More <span> > </span></a>
 						</div>
 					</div>
           <ul class="articles-container-4 articles-container">
@@ -213,7 +213,7 @@ get_header(); ?>
 							</div>
 						</div>
 						<div class="header__view-more">
-							<a href="<?php echo home_url() ?>/casino">View More <span> > </span></a>
+							<a href="<?php echo home_url() ?>/articles/casino">View More <span> > </span></a>
 						</div>
 					</div>
           <ul class="articles-container articles-container-4">
@@ -264,7 +264,7 @@ get_header(); ?>
 							</div>
 						</div>
 						<div class="header__view-more">
-							<a href="<?php echo home_url() ?>/horses">View More <span> > </span></a>
+							<a href="<?php echo home_url() ?>/articles/horses">View More <span> > </span></a>
 						</div>
 					</div>
           <ul class="articles-container articles-container-4 ">
