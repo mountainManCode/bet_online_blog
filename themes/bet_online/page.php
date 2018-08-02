@@ -94,14 +94,6 @@ get_header();
 					'orderby' => 'date',
 					'orderby' => 'DEC',
 					'category_name' => $idObj,
-				// 	'tax_query' => array(
-				// 		array(
-				// 				'taxonomy' => 'category',
-				// 				'field' => 'term_id',
-				// 				'terms' => array($idObj),
-				// 				'include_children' => true,
-				// 		),
-				// )
 				);
 					
 					$posts = get_posts( $args );
@@ -142,14 +134,6 @@ get_header();
 
 					$args = array(
 						'post_type'=>'events_post_type',
-						// 'tax_query' => array(
-						// 	array(
-						// 			'taxonomy' => 'category',
-						// 			'field' => 'term_id',
-						// 			'terms' => array($idObj),
-						// 			'include_children' => true,
-						// 	),
-						// ),
 						'category_name' => $idObj,
 						'post_status'=>'future',
 						'orderBy'=>'post_date',
