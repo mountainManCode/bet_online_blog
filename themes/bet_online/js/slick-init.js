@@ -11,7 +11,7 @@
     fade: true,
     cssEase: 'linear',
     focusOnSelect: true,
-    focusOnChange: true,
+    focusOnChange: false,
     infinite: true,
     swipe: true
   });
@@ -38,7 +38,7 @@
           accessibility: true,
           lazyLoad: 'ondemand',
           focusOnSelect: true,
-          focusOnChange: true,
+          focusOnChange: false,
           slidesToShow: 4,
           slidesToScroll: 4,
           swipe: false,

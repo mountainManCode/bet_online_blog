@@ -9,7 +9,7 @@ section.signUp {
   background-repeat: no-repeat;
   background-size: cover;
   background: center / cover no-repeat
-      url('./assets/img/new/football-stadium.jpg'),
+      url('./assets/img/new/EmailSignup_Background.png'),
     linear-gradient(to bottom, rgba(0, 0, 0, 0), #000000);
   background-blend-mode: darken;
 
@@ -71,6 +71,8 @@ section.signUp {
     }
     // Form SUBMIT Button
     p input[type='submit'] {
+      width: 100%;
+      max-width: 180px;
       padding: 10px;
       border-color: $color__border-button-event;
       border-radius: 4.2px;
@@ -88,6 +90,7 @@ section.signUp {
         flex: 2 0 40%;
       }
     }
+    // Response - Confirmation/Error
     div.wpcf7-response-output {
       margin: 15px 0 0 0;
       padding: 0;
