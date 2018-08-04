@@ -1,6 +1,6 @@
-# Inhabitent
+# Bet Online Blog
 
-A WordPress theme for Bet Online blog website. Purpose it to create more traffic for it's main website. This theme was forked from Underscores. 
+A WordPress theme for Bet Online blog website. Purpose it to create more traffic for it's main website. This theme was created from Underscores. 
 
 ## Technology Used
 
