@@ -84,6 +84,9 @@ get_header();
 						</div>
 					</div>
 				</div>
+				<div class="header__view-more">
+					<a href="<?php echo home_url() ?>/videos">View More <span>  ></span></a>
+				</div>
 			</div>
 			<ul id="videos-list" class="videos-list">
 				<?php

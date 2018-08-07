@@ -26,7 +26,7 @@
               <span id='article__category' class='article__category'>
 
                 <a href="
-                  <?php echo home_url(); ?>/articles/<?php
+                  <?php echo home_url(); ?>/<?php
                     $category = get_the_category(); 
                     $category_parent_id = $category[0]->category_parent;
                     if ( $category_parent_id != 0 ) {

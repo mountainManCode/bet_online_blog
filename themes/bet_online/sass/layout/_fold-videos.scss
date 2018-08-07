@@ -155,7 +155,7 @@ ul.videos-list {
     height: 100%;
     width: 100%;
     position: absolute;
-    z-index: 99;
+    z-index: 10;
     display: flex;
     flex-flow: column nowrap;
     justify-content: center;
@@ -248,7 +248,7 @@ ul.videos-list {
           pointer-events: auto;
 
           object.x-category {
-            position: absolute;
+            // position: absolute;
             left: 0;
             bottom: 0;
             z-index: 99;
